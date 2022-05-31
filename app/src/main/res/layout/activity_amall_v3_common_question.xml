@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    tools:context=".equnshang.activity.AMallV3CommonQuestionActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/background_radius_white"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="猜你想问"
+            android:layout_marginTop="14dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="14dp"
+            android:textColor="#ff333333"
+            android:textSize="19dp"
+            />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="14dp"
+            android:paddingVertical="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拼团有效期是多久？"
+            android:id="@+id/text1"
+            android:textColor="#ff333333"
+            android:textSize="13dp"
+            />
+
+        <View
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="14dp"
+            android:background="@color/grey_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="什么情况下会拼团失败？"
+            android:textColor="#ff333333"
+            android:textSize="13dp"
+            android:id="@+id/text2"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="14dp"
+            android:paddingVertical="7dp"
+            />
+
+        <View
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="14dp"
+            android:background="@color/grey_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拼团失败后我的钱款去向何处？"
+            android:textColor="#ff333333"
+            android:id="@+id/text3"
+            android:textSize="13dp"
+            android:paddingVertical="7dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="8dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

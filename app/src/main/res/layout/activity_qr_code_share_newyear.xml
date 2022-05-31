@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="24dp"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar" android:id="@+id/top"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c3161d"
+            android:layout_below="@id/rl_share_title">
+
+            <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+                android:id="@+id/bg_sbuimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:zoomEnabled="false"
+                android:adjustViewBounds="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_share_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <ImageView
+                android:id="@+id/chuyibaidanian"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <!--android:src="@mipmap/bg_chuyibaidanian"-->
+
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/img_second"
+                android:src="@mipmap/bg_newyear_invite_activity_second"/>-->
+
+            <Button
+                android:id="@+id/share"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="27dp"
+                android:background="@drawable/bg_newyear_share"
+                android:text="@string/btn_share"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

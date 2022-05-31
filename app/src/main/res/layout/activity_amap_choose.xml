@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/root_toolbar"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/toolbar_back"
+            android:src="@mipmap/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textColor="@color/black"
+            android:text="选择地址"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/toolbar_back"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_back"
+            android:id="@+id/toolbar_title"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="完成"
+            android:layout_marginRight="17.5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/toolbar_right"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <AutoCompleteTextView
+            android:id="@+id/keyWord"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/text_search"
+            android:completionThreshold="1"
+            android:dropDownVerticalOffset="1.0dip"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginRight="-10dp"
+            android:hint="请输入关键字"
+            android:textColorHint="#C0C0C0"
+            android:imeOptions="actionDone"
+            android:inputType="text|textAutoComplete"
+            android:maxLength="20"
+            android:paddingRight="37.0dip"
+            android:paddingLeft="20.0dip"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:focusable="true"/>
+
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:onClick="onActionSearchByKey"
+            android:text="Search"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <com.qunshang.wenpaitong.equnshang.view.AMapSegmentedGroup
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/segmented_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        segmentedgroup:sc_border_width="1dp"
+        segmentedgroup:sc_corner_radius="2dp">
+
+        <RadioButton
+            android:id="@+id/radio0"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:checked="true"
+            android:text="住宅区" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="学校" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="楼宇" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".33"
+            android:text="商场" />
+
+    </com.qunshang.wenpaitong.equnshang.view.AMapSegmentedGroup>
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/map"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1px"
+        android:divider="@android:color/darker_gray"/>
+
+</LinearLayout>

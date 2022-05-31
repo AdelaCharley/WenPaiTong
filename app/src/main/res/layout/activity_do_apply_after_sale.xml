@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/order_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_tuikuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="17dp"
+                android:background="@drawable/background_radius_white"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_return_goods_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="18dp"
+                    android:text="退款金额"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_return_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="23dp"
+                    android:textColor="#ff333333"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_return_goods_money"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_return_goods_money"
+                    app:srcCompat="@mipmap/icon_back_right"
+                    tools:text="219.00" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="￥"
+                    android:textColor="#ff333333"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_return_price"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_return_price"
+                    app:srcCompat="@mipmap/icon_back_right" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_newaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_radius_white"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/top">
+
+                <ImageView
+                    android:id="@+id/label_icon_new"
+                    android:layout_width="11dp"
+                    android:layout_height="13.5dp"
+                    android:layout_marginLeft="17.5dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="26dp"
+                    android:src="@mipmap/amallv3_icon_map"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="选择收货地址"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/label_icon_new"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="18dp"
+                    android:src="@mipmap/icon_back_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:background="@drawable/background_radius_white"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="收货信息"
+                    android:textColor="#ff333333"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E6E6E6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/label" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/label">
+
+                    <TextView
+                        android:id="@+id/label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="7dp"
+                        android:background="#fff3594f"
+                        android:paddingHorizontal="7dp"
+                        android:paddingVertical="2dp"
+                        android:text="默认"
+                        android:textColor="#ffffffff"
+                        android:textSize="11dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/addresssite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#ff333333"
+                        android:textSize="16dp"
+                        app:layout_constraintLeft_toLeftOf="@id/label"
+                        app:layout_constraintTop_toBottomOf="@id/label" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="24dp"
+                    android:text=""
+                    android:textColor="#ff666666"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout1" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="48dp"
+                    android:text=""
+                    android:textColor="#ff666666"
+                    android:textSize="11dp"
+                    app:layout_constraintBottom_toBottomOf="@id/name"
+                    app:layout_constraintLeft_toRightOf="@id/name"
+                    app:layout_constraintTop_toTopOf="@id/name" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_radius_white_top">
+
+                <TextView
+                    android:id="@+id/tv_return_reason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="18dp"
+                    android:text="退款原因"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:hint="请选择"
+                    android:paddingVertical="5dp"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textColorHint="#ff999999"
+                    android:textSize="13dp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_return_reason"
+                    app:layout_constraintLeft_toRightOf="@id/tv_return_reason"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_return_reason" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_return_shuoming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="18dp"
+                    android:text="退款说明"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:text=""
+                    android:paddingVertical="5dp"
+                    android:textColor="#333333"
+                    android:textColorHint="#ff999999"
+                    android:textSize="13dp"
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_return_shuoming"
+                    app:layout_constraintLeft_toRightOf="@id/tv_return_shuoming"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_return_shuoming" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_radius_white_bottom">
+
+                <TextView
+                    android:id="@+id/tv_return_tupian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="18dp"
+                    android:text="上传图片（限3张）"
+                    android:textColor="#333333"
+                    android:textSize="13dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/images"
+                    android:overScrollMode="never"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginBottom="24dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_return_tupian"
+                    app:spanCount="3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/bg_new_address_amallv3"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="提交"
+                android:textColor="#ffffffff"
+                android:textSize="20dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

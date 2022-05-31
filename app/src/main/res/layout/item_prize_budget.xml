@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/vip_day_middle_six"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/prizekind"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="18dp"
+        android:text="一等奖"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:adjustViewBounds="true"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:id="@+id/prize_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prizekind"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constrainedWidth="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="60dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/prize_icon"
+        app:layout_constraintLeft_toRightOf="@id/prize_icon"
+        app:layout_constraintBottom_toBottomOf="@id/prize_icon">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prize_name"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/prize_desc"
+            android:textSize="14dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

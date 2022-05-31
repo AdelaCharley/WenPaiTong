@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F2F1F0"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_r8"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_f7f7f7_r8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity1"
+                android:layout_width="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@mipmap/ic_order" />
+
+
+                <TextView
+                    android:id="@+id/tv_title_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:textColor="#333333"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img1"
+                    app:layout_constraintStart_toEndOf="@+id/img1"
+                    app:layout_constraintTop_toTopOf="@+id/img1"
+                    tools:text="每日活动" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="1dp"
+                    android:textColor="#ED2E2E"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/img1"
+                    app:layout_constraintTop_toBottomOf="@+id/img1"
+                    tools:text="连续签到领取好礼" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_f7f7f7_r8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/img2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@mipmap/ic_order" />
+
+                <TextView
+                    android:id="@+id/tv_title_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:textColor="#333333"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img2"
+                    app:layout_constraintStart_toEndOf="@+id/img2"
+                    app:layout_constraintTop_toTopOf="@+id/img2"
+                    tools:text="协议市场" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="1dp"
+                    android:textColor="#ED2E2E"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/img2"
+                    app:layout_constraintTop_toBottomOf="@+id/img2"
+                    tools:text="更多好货等你来挑" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_f7f7f7_r8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/activity3"
+                android:layout_width="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@mipmap/ic_order" />
+
+                <TextView
+                    android:id="@+id/tv_title_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:textColor="#333333"
+                    android:textSize="14dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img3"
+                    app:layout_constraintStart_toEndOf="@+id/img3"
+                    app:layout_constraintTop_toTopOf="@+id/img3"
+                    tools:text="会员中心" />
+
+                <TextView
+                    android:id="@+id/tv_subtitle_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="1dp"
+                    android:textColor="#ED2E2E"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/img3"
+                    app:layout_constraintTop_toBottomOf="@+id/img3"
+                    tools:text="享受更多特权" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/new_user_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:visibility="visible"
+        android:visibility="gone">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/bg_new_user_gift"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/all_corners_8" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="新人专享大礼包"
+            android:textColor="#ff333333"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36" />
+
+        <TextView
+            android:id="@+id/tv_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#ffed2e2e"
+            android:textSize="12dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            tools:text="倒计时：23：45：12" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

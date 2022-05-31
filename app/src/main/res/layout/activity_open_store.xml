@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".equnshang.activity.OpenStoreActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/layout_status"
+            android:background="#ffe3e3e3">
+
+            <ImageView
+                android:layout_width="8.5dp"
+                android:layout_height="10dp"
+                android:src="@mipmap/store_inform"
+                android:layout_marginVertical="12dp"
+                android:layout_marginHorizontal="22dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="基本信息"
+                android:id="@+id/text_status"
+                android:textColor="#ffffffff"
+                android:textSize="10dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_image"
+            android:layout_width="match_parent"
+            android:layout_height="67dp">
+
+            <TextView
+                style="@style/manange_store_text1"
+                android:text="店铺图片"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/right_back"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/right_back"
+                android:layout_width="6.5dp"
+                android:layout_height="11dp"
+                android:layout_marginRight="22dp"
+                android:src="@mipmap/icon_back_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#ffe3e3e3"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/label_store_name"
+                android:text="店铺名称"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/manange_store_text1"/>
+
+            <EditText
+                android:id="@+id/store_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@null"
+                android:hint="请输入店铺名称"
+                android:textSize="13dp"
+                android:gravity="right|center_vertical"
+                android:maxLength="20"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toRightOf="@id/label_store_name"
+                android:layout_marginRight="50.5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="店铺电话"
+                android:id="@+id/label_store_phone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/manange_store_text1"/>
+
+            <EditText
+                android:id="@+id/store_phone"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|right"
+                android:background="@null"
+                android:hint="请输入店铺电话"
+                android:textSize="13dp"
+                android:layout_marginRight="50.5dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toRightOf="@id/label_store_phone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_open"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/manange_store_text1"
+                android:text="开店时间"
+                android:id="@+id/label_open_store_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/opentime"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|right"
+                app:layout_constrainedWidth="true"
+                android:layout_marginRight="50.5dp"
+                android:background="@null"
+                android:text="请设置开店时间"
+                android:textSize="13dp"
+                app:layout_constraintLeft_toRightOf="@id/label_open_store_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/manange_store_text1"
+                android:text="关店时间"
+                android:id="@+id/label_close_store_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/closetime"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="50.5dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toRightOf="@id/label_close_store_time"
+                android:background="@null"
+                android:text="请设置关店时间"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/manange_store_text1"
+                android:text="详细位置"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginRight="22dp"
+                android:background="@null"
+                android:hint="请输入详细位置"
+                android:textSize="12dp"
+                android:id="@+id/detaillocation"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_storelocation">
+
+            <TextView
+                android:text="店铺位置"
+                android:id="@+id/label_storelocation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/manange_store_text1"/>
+
+            <TextView
+                android:id="@+id/storelocation"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical|right"
+                android:background="@null"
+                android:textSize="13dp"
+                android:text="请设置店铺位置"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toRightOf="@id/label_storelocation"
+                android:layout_marginRight="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/right_back_storelocation"/>
+
+            <ImageView
+                android:id="@+id/right_back_storelocation"
+                android:layout_width="6.5dp"
+                android:layout_height="11dp"
+                android:visibility="invisible"
+                android:src="@mipmap/icon_back_right"
+                android:layout_marginRight="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_store_info">
+
+            <TextView
+                android:text="店铺简介(选填)"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                style="@style/manange_store_text1"/>
+
+            <TextView
+                android:id="@+id/storeinfo"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:gravity="end|center_vertical"
+                android:background="@null"
+                android:textSize="13dp"
+                android:ellipsize="end"
+                android:text="请输入店铺简介"
+                android:layout_marginRight="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/right_back_storeinfo"/>
+
+            <ImageView
+                android:id="@+id/right_back_storeinfo"
+                android:layout_width="6.5dp"
+                android:layout_height="11dp"
+                android:visibility="invisible"
+                android:src="@mipmap/icon_back_right"
+                android:layout_marginRight="22dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认"
+        android:textColor="#ffffffff"
+        android:textSize="18dp"
+        android:id="@+id/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="43dp"
+        android:layout_marginHorizontal="38dp"
+        android:gravity="center"
+        android:paddingVertical="13dp"
+        android:background="@color/blue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

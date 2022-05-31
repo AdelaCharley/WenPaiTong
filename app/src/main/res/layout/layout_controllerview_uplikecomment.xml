@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:ignore="RelativeOverlap"
+    android:layout_marginBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="72dp"
+        android:layout_height="78dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_show_head"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp" />
+
+        <ImageView
+            android:id="@+id/ivFocus"
+            android:layout_width="35dp"
+            android:layout_height="38dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingHorizontal="5dp"
+            android:paddingBottom="13dp"
+            android:src="@mipmap/ic_add_focus"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivUp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/btn_main_up_false"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvUpCount"
+        style="@style/Tv.White"
+        android:text="0"
+        android:textSize="11dp"/>
+
+    <ImageView
+        android:id="@+id/cbLike"
+        android:visibility="gone"
+        android:src="@mipmap/btn_main_like_false"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tvLikeCount"
+        style="@style/Tv.White"
+        android:text="0"
+        android:textSize="11dp"/>
+
+    <ImageView
+        android:id="@+id/ivComment"
+        android:src="@mipmap/ic_main_comment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvCommentCount"
+        style="@style/Tv.White"
+        android:text="0"
+        android:textSize="11dp"/>
+
+    <ImageView
+        android:id="@+id/ivShare"
+        android:src="@mipmap/ivshare"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvShare"
+        style="@style/Tv.White"
+        android:text="分享"
+        android:textSize="13dp"/>
+
+    <!--<ImageView
+        android:id="@+id/ivInvite"
+        android:src="@mipmap/btn_main_qrcode"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvInvite"
+        style="@style/Tv.White"
+        android:text="邀请码"
+        android:textSize="12dp"/>-->
+
+    <ImageView
+        android:id="@+id/ivLiebian"
+        android:src="@mipmap/liebianfang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="32dp"
+        android:textColor="@color/white"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvLieBian"
+        style="@style/Tv.White"
+        android:text="裂变"
+        android:textSize="13dp"/>
+
+
+</LinearLayout>

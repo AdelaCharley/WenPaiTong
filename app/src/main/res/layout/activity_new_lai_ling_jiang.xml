@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.NewLaiLingJiangActivity">
+
+    <include layout="@layout/layout_toolbar" android:id="@+id/top"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_light"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?actionBarSize"
+        style="@style/new_lailingjiang_text"
+        android:visibility="gone"
+        app:tabTextAppearance="@style/newlailingjiang_textsize"
+        android:id="@+id/tablayout"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:text="每日抽奖"
+            android:textColor="#ff333333"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:id="@+id/meierichoujiang"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:text="每周任务"
+            android:textColor="#ff333333"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:id="@+id/meizhourenwu"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:text="会员日"
+            android:textColor="#ff333333"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:id="@+id/huiyuanri"
+            android:gravity="center"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

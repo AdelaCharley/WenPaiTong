@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical"
+    tools:context=".equnshang.fragment.AMallV3MyFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey"
+        android:orientation="vertical"
+        tools:context=".equnshang.fragment.AMallV3MyFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:background="@mipmap/bg_amallv3_my">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userimage"
+                android:layout_width="77dp"
+                android:layout_height="77dp"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="47dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#ff333333"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/userimage"
+                app:layout_constraintTop_toTopOf="@id/userimage" />
+
+            <TextView
+                android:id="@+id/label_identity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_amallv3_my_identity"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="2dp"
+                android:text="粉丝"
+                android:textColor="#ffffffff"
+                android:textSize="12dp"
+                app:layout_constraintLeft_toRightOf="@id/userimage"
+                app:layout_constraintTop_toBottomOf="@id/username" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="33dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userimage">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/star_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:text="-"
+                        android:textColor="@color/text_grey_heavy"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="12dp"
+                        android:text="收藏"
+                        android:textColor="#ff929291"
+                        android:textSize="12dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_history"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/history_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:text="-"
+                        android:textColor="@color/text_grey_heavy"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="12dp"
+                        android:text="足迹"
+                        android:textColor="#ff929291"
+                        android:textSize="12dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_discount_ticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/discount_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:text="-"
+                        android:textColor="@color/text_grey_heavy"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginTop="12dp"
+                        android:text="优惠券"
+                        android:textColor="#ff929291"
+                        android:textSize="12dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/gonow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="-10dp"
+            android:scaleType="centerInside"
+            android:background="@mipmap/bg_amallv3_my_vip_background"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/background_radius_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:text="我的订单"
+                android:textColor="#ff333333"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/allorders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="17dp"
+                android:paddingRight="31dp"
+                android:text="全部订单"
+                android:textColor="#ff999999"
+                android:textSize="11dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="26dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/allorders">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_waitforpay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_waitforpay"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/amallv3_waitforpay"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="待支付"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_waitforpay" />
+
+                    <TextView
+                        android:id="@+id/count_waitforpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_waitforpay"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_waitforpay" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_waitforgroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_waitforgroup"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/amallv3_waitforgroup"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="待成团"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_waitforgroup" />
+
+                    <TextView
+                        android:id="@+id/count_waitforgroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_waitforgroup"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_waitforgroup" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_waitfordeliver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_waitfordeliver"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/amallv3_waitfordeliver"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="待发货"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_waitfordeliver" />
+
+                    <TextView
+                        android:id="@+id/count_waitfordeliver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_waitfordeliver"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_waitfordeliver" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_waitforreceive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_waitforget"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/amallv3_waitforget"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="待收货"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_waitforget" />
+
+                    <TextView
+                        android:id="@+id/count_waitforget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_waitforget"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_waitforget" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_alreadyover"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_already_get"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/amallv3_already_get"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:text="已完成"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_already_get" />
+
+                    <TextView
+                        android:id="@+id/count_already_get"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_already_get"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_already_get" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="14dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/background_radius_white">
+
+            <TextView
+                android:id="@+id/label_service_tool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:text="服务与工具"
+                android:textColor="#ff333333"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="26dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_service_tool">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_mygroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_mygroup"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/amallv3_mygroup"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="我的团购"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_mygroup" />
+
+                    <TextView
+                        android:id="@+id/count_mygroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_mygroup"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_mygroup" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_exchange"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/labelimage_exchange"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/amallv3_refund"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="退款售后"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/labelimage_exchange" />
+
+                    <TextView
+                        android:id="@+id/count_exchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-6dp"
+                        android:background="@drawable/bg_amallv3_my_countlabel"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="1"
+                        android:textColor="@color/white"
+                        android:textSize="9dp"
+                        android:visibility="gone"
+                        app:layout_constraintLeft_toRightOf="@id/labelimage_exchange"
+                        app:layout_constraintTop_toTopOf="@id/labelimage_exchange" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/amallv3_manage_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="地址管理"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_common"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/amallv3_common_question" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="常见问题"
+                        android:textColor="#ff333333"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

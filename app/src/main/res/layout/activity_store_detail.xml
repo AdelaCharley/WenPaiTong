@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.StoreDetailActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/image_storer"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            android:textColor="@color/text_grey_heavy"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/image_storer"
+            app:layout_constraintTop_toTopOf="@id/image_storer" />
+
+        <TextView
+            android:id="@+id/merchants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/bg_blue_button"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="2dp"
+            android:text="商家资质信息"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/image_storer"
+            app:layout_constraintLeft_toRightOf="@id/image_storer" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:id="@+id/concern"
+            android:gravity="center"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            android:paddingVertical="3dp"
+            android:paddingHorizontal="10dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_blue_button"
+            app:layout_constraintBottom_toTopOf="@id/clienter"
+            app:layout_constraintTop_toTopOf="@id/image_storer"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="客服"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:paddingVertical="3dp"
+            android:textColor="@color/white"
+            android:id="@+id/clienter"
+            android:paddingHorizontal="10dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_blue_button"
+            app:layout_constraintTop_toBottomOf="@id/concern"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        style="@style/store_detail_tab"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tabs"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

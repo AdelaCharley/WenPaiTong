@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".equnshang.activity.WeekPrizeHistoryActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="30dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@mipmap/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="协议"
+            android:textColor="@color/black"
+            android:textSize="@dimen/toolbar_title_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:paddingLeft="8dp"
+            android:text="规则"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/label_ask"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/label_ask"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="18dp"
+            android:src="@drawable/circleask"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/finishedtask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="恭 喜 您 完 成 任 务"
+        android:layout_gravity="center"
+        android:textColor="@color/purple"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="助力记录"
+        android:layout_marginTop="34dp"
+        android:layout_marginLeft="18dp"
+        android:textColor="#ff333333"
+        android:textSize="17dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="5"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prize_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prize_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="14dp"
+            android:layout_marginRight="22dp"
+            android:text=""
+            app:layout_constrainedWidth="true"
+            app:layout_constraintLeft_toRightOf="@id/prize_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/prize_image" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/receiveprize_now"
+            app:layout_constraintLeft_toRightOf="@id/prize_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/prize_name">
+
+            <TextView
+                android:id="@+id/tags_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tags_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/tags_three"
+                android:textSize="14dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/receiveprize_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_purple"
+            android:gravity="center"
+            android:paddingVertical="3dp"
+            android:text="礼品派发中"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:visibility="visible"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/prize_image"
+            app:layout_constraintLeft_toLeftOf="@id/prize_name"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_light"
+        android:layout_marginHorizontal="17dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_contactinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/label5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="领奖信息"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label4" />
+
+        <TextView
+            android:id="@id/label6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="兑换时间："
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label5" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/label6"
+            app:layout_constraintLeft_toRightOf="@id/label6"
+            app:layout_constraintTop_toTopOf="@id/label6" />
+
+        <TextView
+            android:id="@+id/label7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12.5dp"
+            android:text="联系人："
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/label6" />
+
+        <TextView
+            android:id="@+id/contacter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@id/label7"
+            app:layout_constraintLeft_toLeftOf="@id/time"
+            app:layout_constraintTop_toTopOf="@id/label7" />
+
+        <TextView
+            android:id="@id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/contacter"
+            app:layout_constraintTop_toBottomOf="@id/contacter" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/shareto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/bg_purple"
+        android:gravity="center"
+        android:paddingVertical="3dp"
+        android:text="中奖了炫耀一下"
+        android:textColor="@color/white"
+        android:textSize="23dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.MerchantQualificationsActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:id="@+id/imageslist"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_light"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="11dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="34dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:text="注:以上信息，由国家依据《电子商务法》规定发布公示。如需进一步核实，可联系商家客服咨询。"
+                android:textColor="#ff999999"
+                android:layout_marginBottom="10dp"
+                android:textSize="13dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

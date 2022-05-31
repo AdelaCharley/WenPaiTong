@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="图片正在加载中，请稍作等待"
+        android:textSize="14dp"
+        android:gravity="center"
+        android:paddingVertical="3dp"
+        android:id="@+id/text" />
+
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:panEnabled="true"
+        android:visibility="visible"
+        app:quickScaleEnabled="false"
+        app:zoomEnabled="false"
+        android:id="@+id/product_detail_image" />
+
+</FrameLayout>
+

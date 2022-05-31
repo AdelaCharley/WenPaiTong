@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#366FFF"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="43dp"
+            android:layout_marginBottom="19dp"
+            android:text="作品管理"
+            android:id="@+id/label"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exit"
+            android:text="退出管理"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginRight="17dp"
+            app:layout_constraintTop_toTopOf="@id/label"
+            app:layout_constraintBottom_toBottomOf="@id/label"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/background_radius_blue_bottom"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/tabs"
+        app:tabTextAppearance="@style/manage_content_textsize"
+        style="@style/manage_user_tab"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pagers"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

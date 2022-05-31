@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_light"
+    tools:context=".equnshang.activity.WenBanTongActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@color/grey_light"/>
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_light">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:banner_auto_loop="false"
+                    app:banner_orientation="horizontal"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="31dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="精品拍品"
+                        android:id="@+id/text_shop"
+                        android:textColor="#ff312e2a"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="内容资讯"
+                        android:id="@+id/text_ask"
+                        android:textColor="#ff312e2a"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="企业信息"
+                        android:id="@+id/text_company"
+                        android:textColor="#ff312e2a"
+                        android:textSize="18dp"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:includeFontPadding="false"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jigou"
+                        android:text="机构网点"
+                        android:textColor="#ff312e2a"
+                        android:textSize="18dp"
+                        />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/container"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.FourBackRuleActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开团（仅会员拥有开团权力）："
+        android:textColor="#ff333333"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="29dp"
+        android:text="1.会员选取心仪商品购买并开团成为团长，可以邀请好友拼团。成团后，团内所有人都确认签收并过了7天无理由退换货后，系统自动为团长的订单退款。\n\n2.成团退款的金额为单件商品的金额，团长购买多件也只享受一件商品价格的免单额度。如团长使用优惠券购买多件，则免单金额为使用优惠券后的实付金额除以件数。\n\n3.拼团仅限于同一个商品（且价格一样）拼团，原则上不允许跨其他商品拼团。"
+        android:textColor="#ff666666"
+        android:layout_marginTop="17dp"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="参团："
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:textColor="#ff333333"
+        android:textSize="12dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="29dp"
+        android:text="1.会员、粉丝可通过团长发出的拼团邀请链接购买商品，粉丝可以享受和会员同样的拼团价。\n\n2.因团人数有限制，如超出该团人数限制的部分用户则会拼团失败。\n\n3.拼团时间期限为开团后24小时，如24小时后没有拼团成功，则系统自动退款。如拼团成功后，成员未按照规则超过7天无理由退换货退款后，则该团长无免单资格。"
+        android:textColor="#ff666666"
+        android:layout_marginTop="17dp"
+        android:textSize="12dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.qunshang.wenpaitong.equnshang.activity.UserProtocolActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"
+        android:background="@color/white"/>
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_title">
+        <TextView
+            style="@style/Tv.Black.Title"
+            android:text="群商视界用户协议"
+            android:textSize="@dimen/size_text_title"
+            android:textStyle="bold"/>
+
+        <ImageView
+            style="@style/Iv.Return"
+            android:onClick="toReturn"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/padding_horizontal_latest"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_close"
+            android:onClick="toClose"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvUserProtocol"
+        style="@style/Tv.Black"
+        android:scrollbarThumbVertical="@style/Tv.Black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="@dimen/margin_vertical_latest"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:text="@string/text_login_user_protocol"/>-->
+
+</LinearLayout>

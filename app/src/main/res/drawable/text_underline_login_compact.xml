@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:width="280dp"
+        android:height="1dp"
+        android:top="@dimen/text_underline_compact">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/text_underline" />
+        </shape>
+    </item>
+
+</layer-list>

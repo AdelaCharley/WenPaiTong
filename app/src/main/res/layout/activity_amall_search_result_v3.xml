@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.AMallSearchResultV3Activity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/label1"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_search_result_input"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/cancel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/bg_search_result_text_result"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="男士面膜"
+                    android:textColor="#ff999999"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="8dp"
+                    android:src="@mipmap/amallv3_search_result_input_delete_text" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="11dp"
+                android:background="@null"
+                android:textSize="13dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="33dp"
+            android:paddingVertical="5dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/icon_back"
+            android:text="取消"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_def"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_def"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合"
+                android:textColor="#ff2f2e33"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/label_def"
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="1dp"
+                android:background="#E25451" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_new"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新品"
+                android:textColor="#ff2f2e33"
+                android:textSize="17dp" />
+
+            <View
+                android:id="@+id/label_new"
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="1dp"
+                android:background="#E25451"
+                android:visibility="gone" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_sale"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="销量"
+                android:textColor="#ff2f2e33"
+                android:textSize="17dp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/label_sale"
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="1dp"
+                android:background="#E25451"
+                android:visibility="gone" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="价格"
+                android:textColor="#ff2f2e33"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_price_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▲"
+                android:textSize="8dp"
+                app:layout_constraintLeft_toRightOf="@id/text_price"
+                app:layout_constraintTop_toTopOf="@id/text_price" />
+
+            <TextView
+                android:id="@+id/label_price_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▼"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="@id/text_price"
+                app:layout_constraintLeft_toRightOf="@id/text_price" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="visible" />
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/layout_epmty"
+        layout="@layout/layout_list_empty" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

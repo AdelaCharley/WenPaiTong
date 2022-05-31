@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/item_amall_vip" android:id="@+id/vip"/>
+
+    <CheckBox
+        android:id="@+id/user_product_checkbox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:button="@drawable/btn_refine_user_info_sex"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/vip"
+        app:layout_constraintTop_toTopOf="@id/vip"
+        tools:visibility="visible" />
+</androidx.constraintlayout.widget.ConstraintLayout>

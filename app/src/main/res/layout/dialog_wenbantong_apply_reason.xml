@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_radius_white_top">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout"
+        android:background="@drawable/background_radius_white_top"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff1c1c1c"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="23dp"
+            android:textSize="15dp"
+            android:text="退款原因"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请选择申请退款的原因（必选）："
+            android:textStyle="bold"
+            android:textColor="#ff312e2a"
+            android:layout_marginLeft="28dp"
+            android:textSize="12dp"
+            android:layout_gravity="left"
+            />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:paddingBottom="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="13dp">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:padding="10dp"
+                android:src="@mipmap/wenbantong_apply_exchange_apply_exchange" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.5dp"
+                android:text="不想要了"
+                android:textColor="#ff66645f"
+                android:textSize="14dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/layout2"
+            android:paddingTop="7dp"
+            android:layout_marginLeft="34dp">
+
+            <ImageView
+                android:layout_width="31dp"
+                android:id="@+id/img2"
+                android:padding="10dp"
+                android:layout_height="31dp"
+                android:src="@mipmap/wenbantong_apply_exchange_apply_exchange"/>
+
+            <TextView
+                android:layout_marginLeft="2.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="错拍/多拍"
+                android:id="@+id/text2"
+                android:textColor="#ff66645f"
+                android:textSize="14dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_height="40dp"
+            android:text="确定"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/background_wenbantong_buynow_cannotbuy"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/confirm"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

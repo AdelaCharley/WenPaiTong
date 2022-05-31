@@ -1,0 +1,1276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="28dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="1.5dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginBottom="1.5dp"
+            android:paddingVertical="10dp"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/nav_icon_send"
+            android:visibility="gone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white_bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="375dp"
+                        app:banner_auto_loop="false"
+                        app:banner_orientation="horizontal"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="gone" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/fansprice_symbol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="￥"
+                            android:textColor="#ffe55c40"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent" />
+
+                        <TextView
+                            android:id="@+id/fansprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15.5dp"
+                            android:text=""
+                            android:textColor="#ffe55c40"
+                            android:textSize="27dp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/fansprice_symbol"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layout_benlai"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="2dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/fansprice"
+                            app:layout_constraintLeft_toRightOf="@id/fansprice">
+
+                            <TextView
+                                android:id="@+id/benlaiprice_symbol"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="2dp"
+                                android:text="￥"
+                                android:textColor="#ff666666"
+                                android:textSize="14dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent" />
+
+                            <TextView
+                                android:id="@+id/benlaiprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#ff666666"
+                                android:textSize="20dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/benlaiprice_symbol"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="#ff666666"
+                                app:layout_constrainedWidth="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.55" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:id="@+id/origalprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="$0"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toRightOf="@id/fansprice"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/salecount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:text=""
+                            android:textColor="#ff999999"
+                            android:textSize="12dp"
+                            app:layout_constraintBottom_toBottomOf="@id/fansprice"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/fansprice" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/layout_label_pintuanyouhui"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginTop="12dp"
+                        tools:visibility="gone"
+                        android:background="@drawable/background_amallv3_productdetail_pintuanyouhui_label"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="20dp"
+                            android:layout_marginVertical="7dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@mipmap/amallv3_pintuanyouhui" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="7dp"
+                            android:text="【组四返一】发起拼团邀请好友购买满四人购买全额返现"
+                            android:textColor="#ff333333"
+                            android:textSize="11dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="#ff1b1a1a"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintLeft_toLeftOf="@id/fansprice"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fansprice"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/productdesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="#ff999999"
+                        android:textSize="12dp"
+                        tools:visibility="visible" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    tools:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_express"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/label_express"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="22dp"
+                            android:maxLines="4"
+                            android:text="物流"
+                            android:textColor="#ff999999"
+                            android:textSize="15dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/feight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="29dp"
+                            android:layout_marginRight="8dp"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toRightOf="@id/label_express"
+                            app:layout_constraintRight_toLeftOf="@id/label_icon_express"
+                            app:layout_constraintTop_toTopOf="@id/label_express" />
+
+                        <ImageView
+                            android:id="@+id/label_icon_express"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label_express"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label_express" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_baozhang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/label_service_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="保障"
+                            android:textColor="#ff999999"
+                            android:textSize="15dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/label_service"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="29dp"
+                            android:layout_marginRight="8dp"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toRightOf="@id/label_service_text"
+                            app:layout_constraintRight_toLeftOf="@id/label_icon_service"
+                            app:layout_constraintTop_toTopOf="@id/label_service_text">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <ImageView
+                            android:id="@+id/label_icon_service"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label_service_text"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label_service_text" />
+
+                        <!--<ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/duihao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="坏单包赔"
+                        android:textColor="#ff333333"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/duihao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:text="7天无理由退货"
+                        android:textColor="#ff333333"
+                        android:textSize="11dp" />
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginRight="6dp"
+                        android:src="@mipmap/duihao" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="假一赔三"
+                        android:textColor="#ff333333"
+                        android:textSize="11dp" />-->
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/sku_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="8dp">
+
+                            <TextView
+                                android:id="@+id/label5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="18dp"
+                                android:text="选择"
+                                android:textColor="#ff999999"
+                                android:textSize="15dp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_sku"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="21dp"
+                                android:text="请选择规格"
+                                android:textColor="#ff333333"
+                                android:textSize="15dp"
+                                app:layout_constraintBottom_toBottomOf="@id/label5"
+                                app:layout_constraintLeft_toRightOf="@id/label5"
+                                app:layout_constraintTop_toTopOf="@id/label5" />
+
+                            <ImageView
+                                android:layout_width="6dp"
+                                android:layout_height="10dp"
+                                android:layout_marginRight="17dp"
+                                android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                                app:layout_constraintBottom_toBottomOf="@id/label5"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/label5" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/spec_init_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="83dp"
+                            android:layout_marginTop="20dp"
+                            android:src="@mipmap/ic_launcher"
+                            android:visibility="gone"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/label5" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/spec_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="12dp"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/label23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:text="参数"
+                            android:textColor="#ff999999"
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" /><!--android:layout_marginTop="15.5dp"-->
+
+                        <TextView
+                            android:id="@+id/attributes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            android:layout_marginRight="10dp"
+                            app:layout_constraintRight_toLeftOf="@id/image2"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintBottom_toBottomOf="@id/label23"
+                            app:layout_constraintLeft_toRightOf="@id/label23"
+                            app:layout_constraintTop_toTopOf="@id/label23" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:id="@+id/image2"
+                            android:layout_marginRight="17dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label23"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label23" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_pintuanguize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label_pintuan"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:background="@drawable/bg_f3594f_ffffff_r2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="拼团玩法"
+                            android:textColor="#ff333333"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="@id/label_pintuan"
+                            app:layout_constraintLeft_toRightOf="@id/label_pintuan"
+                            app:layout_constraintTop_toTopOf="@id/label_pintuan" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="9dp"
+                            android:text="详细规则"
+                            android:textColor="#ff333333"
+                            android:textSize="11dp"
+                            app:layout_constraintBottom_toBottomOf="@id/label_pintuan"
+                            app:layout_constraintRight_toLeftOf="@id/label_icon_right_pintuan"
+                            app:layout_constraintTop_toTopOf="@id/label_pintuan" />
+
+                        <ImageView
+                            android:id="@+id/label_icon_right_pintuan"
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="17dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label_pintuan"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label_pintuan" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginRight="17.5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#ffcccccc" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="10dp"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/amallv3_pintuantupian"
+                        android:text="暂无心得"
+                        android:textSize="14dp"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    tools:visibility="gone"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/label10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label9"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:background="@drawable/bg_f3594f_ffffff_r2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="商家店铺"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="@id/label9"
+                            app:layout_constraintLeft_toRightOf="@id/label9"
+                            app:layout_constraintTop_toTopOf="@id/label9" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginRight="17.5dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#ffcccccc" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_manufacture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/image_shop"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            android:layout_marginLeft="17.5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/name_shop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.5dp"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/image_shop"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/enterstore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:background="@drawable/background_amallv3_entershop"
+                            android:paddingLeft="21.5dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="21.5dp"
+                            android:paddingBottom="8dp"
+                            android:text="进入店铺"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shopproducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginBottom="20dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <!--<androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_radius_white"
+                android:paddingBottom="15dp"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/label30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/label11"
+                        android:layout_width="2dp"
+                        android:layout_height="12dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="7.5dp"
+                        android:background="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:text="个人心得"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@id/label11"
+                        app:layout_constraintLeft_toRightOf="@id/label11"
+                        app:layout_constraintTop_toTopOf="@id/label11" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="17.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginRight="17.5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#ffcccccc" />
+
+                <TextView
+                    android:id="@+id/label14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无心得"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="17.5dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+-->
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_radius_white_top"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/label63"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label16"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:background="@drawable/bg_f3594f_ffffff_r2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="商品详情"
+                            android:textColor="@color/black"
+                            android:textSize="17dp"
+                            app:layout_constraintBottom_toBottomOf="@id/label16"
+                            app:layout_constraintLeft_toRightOf="@id/label16"
+                            app:layout_constraintTop_toTopOf="@id/label16" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginRight="17.5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#ffcccccc" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/image_detail_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label17" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/label18"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:background="@drawable/bg_f3594f_ffffff_r2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/label20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="价格说明"
+                            app:layout_constraintTop_toTopOf="@id/label18"
+                            app:layout_constraintBottom_toBottomOf="@id/label18"
+                            app:layout_constraintLeft_toRightOf="@id/label18"
+                            android:textColor="#ff333333"
+                            android:textSize="17dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    <!--<androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginTop="13.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/circle_f3594f" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="粉丝零售价"
+                            android:textColor="#ff333333"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29.5dp"
+                        android:layout_marginTop="9.5dp"
+                        android:layout_marginRight="17dp"
+                        android:text="粉丝零售价为群票粉丝参加该商品零售的价格"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label20" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginTop="13.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/circle_f3594f" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="会员零售价"
+                            android:textColor="#ff333333"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29.5dp"
+                        android:layout_marginTop="9.5dp"
+                        android:layout_marginRight="17dp"
+                        android:text="会员零售价是群票会员参与商品零售的折扣价"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label20" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginTop="13.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/circle_f3594f" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="预售团购价"
+                            android:textColor="#ff333333"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29.5dp"
+                        android:layout_marginTop="9.5dp"
+                        android:layout_marginRight="17dp"
+                        android:text="预售团购价是群票会员参与商品预售团购的超低折扣价"
+                        android:textSize="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/label20" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19.5dp"
+                        android:layout_marginTop="13.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/circle_f3594f" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="异常问题"
+                            android:textColor="#ff333333"
+                            android:textSize="12dp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="9.5dp"
+                        android:layout_marginRight="17dp"
+                        android:layout_marginBottom="30dp"
+                        android:lineSpacingExtra="1dp"
+                        android:id="@+id/introduce"
+                        tools:text="商品信息以商品详情页中的信息为准：商品的具体售价以订单结算页价格为准：如您发现商品售价有异常，建议购买前先联系客服咨询。"
+                        android:textSize="14dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_dianpu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/amallv3_chuchuang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="11dp"
+                    android:text="店铺"
+                    android:textColor="#ff333333"
+                    android:textSize="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/icon_kefu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="11dp"
+                    android:text="客服"
+                    android:textColor="#ff333333"
+                    android:textSize="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_star"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/amallv3_detail_unstar" />
+
+                <TextView
+                    android:id="@+id/text_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="11dp"
+                    android:text="收藏"
+                    android:textColor="#ff333333"
+                    android:textSize="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:id="@+id/layout_fans_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-15dp"
+            android:layout_weight="5"
+            android:background="@drawable/bg_amallv3_fans_or_vip_price"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingEnd="15dp"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/bottom_vipprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="￥400"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/label_vipprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:text="单独购买"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_vip_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@drawable/bg_amallv3_vipgroup_price"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/bottom_groupprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="￥300"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/bottom_original"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:text="立即开团"
+                android:textColor="@color/white"
+                android:textSize="13dp"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_pintuan_end"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="@drawable/bg_amallv3_productdetail_pintuan_end"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pintuan_end_user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="7dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="拼团已结束"
+                android:textColor="#ffffffff"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="@id/pintuan_end_user_image"
+                app:layout_constraintLeft_toRightOf="@id/pintuan_end_user_image"
+                app:layout_constraintTop_toTopOf="@id/pintuan_end_user_image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_pintuaning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="@drawable/bg_amallv3_productdetail_pintuaning"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pintuaning_user_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginVertical="7dp"
+                android:layout_marginLeft="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/label_continue_pintuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="继续参与TA的拼单"
+                android:textColor="#ffffffff"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toTopOf="@id/label_pintuan_remaintime"
+                app:layout_constraintLeft_toRightOf="@id/pintuaning_user_image"
+                app:layout_constraintTop_toTopOf="@id/pintuaning_user_image" />
+
+            <TextView
+                android:id="@+id/label_pintuan_remaintime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text=""
+                android:textColor="#ffffffff"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/pintuaning_user_image"
+                app:layout_constraintLeft_toRightOf="@id/pintuaning_user_image"
+                app:layout_constraintTop_toBottomOf="@id/label_continue_pintuan" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_nopintuan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:background="@drawable/bg_amallv3_productdetail_pintuaning"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_nopintuan_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="￥998"
+                android:textColor="#ffffffff"
+                android:textSize="17dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="立即购买"
+                android:textColor="#ffffffff"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_nopintuan_price" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

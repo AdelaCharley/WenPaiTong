@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingHorizontal="@dimen/padding_horizontal_latest"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <!--<TextView
+        android:id="@+id/tvPrivacyProtocol"
+        style="@style/Tv.Black"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="@dimen/padding_horizontal_latest"
+        android:layout_marginBottom="@dimen/margin_vertical_latest"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:text="@string/text_login_privacy_protocol"/>-->
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"
+        android:background="@color/white"/>
+
+</LinearLayout>

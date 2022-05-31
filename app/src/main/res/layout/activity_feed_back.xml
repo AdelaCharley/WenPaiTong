@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_light"
+    tools:context=".equnshang.activity.FeedBackActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:includeFontPadding="false"
+        android:text="问题反馈"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="请输入意见"
+        android:textSize="14dp"
+        android:gravity="left"
+        android:id="@+id/content"
+        android:paddingTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="17dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="图片(最多5张)"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/images"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="联系方式"
+        android:includeFontPadding="false"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_vertical"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:textSize="14dp"
+        android:id="@+id/contact"
+        android:hint="请填写手机号或邮箱，方便我们联系您"
+        android:gravity="left"
+        android:paddingTop="10dp"
+        android:paddingRight="17dp"
+        android:paddingLeft="17dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/submit"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        android:text="提交"
+        android:textSize="16dp"
+        android:background="@drawable/bg_feedback_submit"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

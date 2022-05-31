@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/layout_root"
+    android:visibility="gone"
+    tools:context=".equnshang.activity.ParticipateGroupActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:background="@color/white"
+          android:id="@+id/layout_success"
+          android:visibility="gone"
+          android:gravity="center">
+
+          <ImageView
+              android:layout_width="21dp"
+              android:layout_height="21dp"
+              android:layout_marginTop="24dp"
+              android:layout_marginBottom="24dp"
+              android:src="@mipmap/participate_suceess_icon"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="拼团成功"
+              android:layout_marginLeft="9dp"
+              android:textColor="#fff46358"
+              android:textSize="18dp"
+              />
+
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        android:background="@drawable/bg_white_r9">
+
+      <ImageView
+          android:id="@+id/img_goods"
+          android:layout_width="94dp"
+          android:layout_height="94dp"
+          android:layout_marginStart="17.5dp"
+          android:layout_marginTop="23.5dp"
+          android:layout_marginBottom="15dp"
+          android:scaleType="fitCenter"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/tv_goods_name"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="3dp"
+          android:layout_marginEnd="21.5dp"
+          android:ellipsize="end"
+          android:lines="2"
+          tools:text="江音琵琶6915-1演奏演出五弦琵琶鸡翅 木材质抛光弹拨乐器 江音琵琶6915-1演奏演出五弦琵琶鸡翅 木材质抛光弹拨乐器"
+          android:textSize="13dp"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/img_goods"
+          app:layout_constraintTop_toTopOf="@+id/img_goods" />
+
+      <TextView
+          android:id="@+id/tv_goods_spec"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5.5dp"
+          tools:text="规格：规格24瓶"
+          android:textColor="#999999"
+          android:textSize="10dp"
+          app:layout_constraintStart_toStartOf="@+id/tv_goods_name"
+          app:layout_constraintTop_toBottomOf="@+id/tv_goods_name" />
+
+      <TextView
+          android:id="@+id/tv_price_symbol"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="￥"
+          android:textColor="#F3594F"
+          android:textSize="12dp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/img_goods"
+          app:layout_constraintStart_toStartOf="@+id/tv_goods_spec" />
+
+      <TextView
+          android:id="@+id/tv_goods_price"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="7dp"
+          android:textColor="#F3594F"
+          android:textSize="18dp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="@+id/tv_price_symbol"
+          app:layout_constraintStart_toEndOf="@+id/tv_price_symbol"
+          tools:text="219.00" />
+
+      <TextView
+          android:id="@+id/tv_goods_quantity"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginEnd="28.5dp"
+          tools:text="申请数量: 1"
+          android:textSize="15dp"
+          android:visibility="gone"
+          app:layout_constraintBottom_toBottomOf="@+id/tv_goods_price"
+          app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:layout_marginHorizontal="14dp"
+        android:background="@color/grey_light"/>
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="wrap_content"
+          android:layout_gravity="center"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          android:orientation="horizontal"
+          android:id="@+id/list"
+          android:layout_marginTop="40dp"
+          android:layout_height="wrap_content"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:id="@+id/mastersku"
+          android:layout_marginTop="7dp"
+          android:text="拼主所选规格：巧克力味，迷你款（约350克）"
+          android:textColor="#ff999999"
+          android:textSize="15dp"
+          />
+
+      <androidx.appcompat.widget.LinearLayoutCompat
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:id="@+id/layout_remain"
+          android:orientation="horizontal">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="仅剩"
+              android:textColor="#ff333333"
+              android:textSize="18dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="1"
+              android:id="@+id/remaincount"
+              android:textColor="#fff3594f"
+              android:textSize="18dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="个名额，"
+              android:textColor="#ff333333"
+              android:textSize="18dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="23：59：08"
+              android:id="@+id/remaintime"
+              android:textColor="#ff333333"
+              android:textSize="18dp"
+              />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="后结束"
+              android:textColor="#ff333333"
+              android:textSize="18dp"
+              />
+
+      </androidx.appcompat.widget.LinearLayoutCompat>
+
+      <TextView
+          android:id="@+id/doparti"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:layout_marginHorizontal="14dp"
+          android:layout_marginTop="17dp"
+          android:background="@drawable/bg_amallv3_participate_group_parbutton"
+          android:gravity="center"
+          android:paddingVertical="14dp"
+          android:text=""
+          android:textColor="#ffffffff"
+          android:textSize="19dp" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="拼团规则"
+          android:id="@+id/label_rule"
+          android:layout_marginTop="15dp"
+          android:layout_marginLeft="14dp"
+          android:textColor="#ff333333"
+          android:textSize="16dp"
+          />
+
+      <androidx.constraintlayout.utils.widget.ImageFilterView
+          android:layout_width="match_parent"
+          android:layout_marginTop="25dp"
+          android:id="@+id/image_step"
+          android:layout_height="wrap_content"
+          android:layout_marginHorizontal="20dp"
+          android:src="@mipmap/img_pin_tuan_rule"/>
+
+  </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,575 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_bg_theme</item>
+        <item name="colorPrimaryDark">@color/color_bg_theme</item>
+        <item name="colorAccent">@color/blue</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="LearnStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_bg_theme</item>
+        <item name="colorPrimaryDark">@color/color_bg_theme</item>
+        <item name="colorAccent">@color/blue</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="MyDialog" parent="AlertDialog.AppCompat">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/dialog_animation</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="dialog_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit</item>
+    </style>
+
+    <style name="basedialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+<!--    LinearLayout-->
+
+<!--    竖直居中排序-->
+    <style name="LlVCenter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Layout_Personal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:paddingStart">@dimen/padding_horizontal_my_home</item>
+        <item name="android:paddingEnd">@dimen/padding_horizontal_my_home</item>
+        <item name="android:paddingTop">@dimen/padding_vertical_my_home</item>
+        <item name="android:paddingBottom">@dimen/padding_vertical_my_home</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="Layout_Personal_Title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="TranslucentStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item> <!-- 背景色透明 -->
+        <item name="android:windowIsTranslucent">true</item> <!-- 是否有透明属性 -->
+        <item name="android:backgroundDimEnabled">false</item> <!-- 背景是否半透明 -->
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 状态栏透明 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item> <!-- activity窗口切换效果 -->
+    </style>
+
+
+
+    <!-- TextView -->
+    <!--    通用: 普通-->
+    <style name="Tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="Tv.White" parent="Tv">
+        <item name="android:textColor">@color/white</item>
+    </style><!--白色-->
+    <style name="Tv.Black" parent="Tv">
+        <item name="android:textColor">@color/black</item>
+    </style><!--黑色-->
+    <style name="Tv.Grey" parent="Tv">
+        <item name="android:textColor">@color/text_grey</item>
+    </style><!--灰色-->
+    <style name="Tv.Blue" parent="Tv">
+        <item name="android:textColor">@color/blue</item>
+    </style><!--蓝色-->
+    <style name="Tv.EqualSpace" parent="Tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style><!--水平等间距-->
+    <style name="Tv.Black.Title" parent="Tv.Black">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">@dimen/size_text_title</item>
+    </style><!--标题：黑色、居中-->
+    <!--    特定页面-->
+    <style name="Tv.EqualSpace.Personal" parent="Tv.EqualSpace">
+        <item name="android:textSize">13dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style><!--“我的 ”页面-->
+    <style name="Tv.Black.PersonalInfo" parent="Tv.Black">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">15dp</item>
+    </style><!--“我的 ” -> "个人资料" 单项标题-->
+    <style name="Tv.Grey.PersonalInfo" parent="Tv.Grey">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:textSize">10dp</item>
+    </style><!--“我的 ” -> "个人资料" 用户信息-->
+
+
+
+
+    <!--    ImageView-->
+    <!--    通用: 普通-->
+    <style name="Iv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Iv.Return" parent="Iv">
+        <item name="android:src">@mipmap/ic_return</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style><!--返回【<】-->
+    <style name="Iv.Close" parent="Iv">
+        <item name="android:id">@id/ivClose</item>
+        <item name="android:src">@mipmap/ic_close</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style><!--关闭【X】-->
+
+
+    <!--    GridView-->
+    <!--    通用: 普通-->
+    <style name="Gv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numColumns">4</item>
+    </style>
+
+    <style name="TextAppearance.Design.Tab.Custom" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!--ShapeableImageView -->
+    <style name="Circle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="all_corners_16">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="allcorners_15">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="corner_update">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">4dp</item>
+        <item name="cornerSizeTopRight">4dp</item>
+    </style>
+
+    <style name="all_corners_12">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="allcorners_10">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="all_corners_8">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="allcorners_7">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">7dp</item>
+    </style>
+
+    <style name="allcorners_4">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="all_corner_3">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">3dp</item>
+    </style>
+
+    <style name="allcorners_2">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">2dp</item>
+    </style>
+
+    <style name="topcorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">15dp</item>
+        <item name="cornerSizeTopRight">15dp</item>
+    </style>
+
+    <style name="topcorners_7dp">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">7dp</item>
+        <item name="cornerSizeTopRight">7dp</item>
+    </style>
+
+    <style name="TopL_BottomR_16">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否悬浮在activity上 -->
+        <item name="android:windowIsTranslucent">false</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item><!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.6</item><!-- 灰度 -->
+        <item name="android:windowContentOverlay">@null</item><!-- 对话框是否有遮盖 -->
+        <item name="android:colorBackgroundCacheHint">@null</item><!-- 背景缓存颜色 -->
+    </style>
+
+    <style name="multiimage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginHorizontal">5dp</item>
+    </style>
+
+    <style name="physical_layout1">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="physical_layout2">
+
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="physical_text1">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff8194f7</item>
+        <item name="android:textSize">23dp</item>
+        <item name="android:layout_marginTop">23dp</item>
+    </style>
+
+    <style name="physical_text2">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:layout_marginBottom">25dp</item>
+    </style>
+
+    <style name="physical_text3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+    </style>
+
+    <style name="physical_text4">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+    </style>
+
+    <style name="physical_text5">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+
+    <style name="physical_img1">
+
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_marginTop">13dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+
+    </style>
+
+    <style name="physical_img2">
+
+        <item name="android:layout_width">31dp</item>
+        <item name="android:layout_height">31dp</item>
+        <item name="android:layout_marginTop">19dp</item>
+        <item name="android:layout_marginBottom">11dp</item>
+
+    </style>
+
+    <style name="manange_store_text1">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ff333333</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <dimen name="radio_button_conner_radius">5dp</dimen>
+    <dimen name="radio_button_stroke_border">1dp</dimen>
+
+    <color name="radio_button_selected_color">@android:color/tab_indicator_text</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+
+
+    <declare-styleable name="SegmentedGroup">
+        <attr name="sc_corner_radius" format="dimension" />
+        <attr name="sc_border_width" format="dimension" />
+        <attr name="sc_tint_color" format="color" />
+        <attr name="sc_checked_text_color" format="color" />
+    </declare-styleable>
+
+    <style name="RadioButton">
+        <item name="android:textColor">@drawable/button_text_color</item>
+        <item name="android:minHeight">33dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="lottery_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#ffffffff</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="amall_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/text_grey_heavy</item>
+        <item name="tabIndicatorColor">@color/blue</item>
+    </style>
+
+    <style name="lottery_textsize">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="amall_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="order_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="manage_content_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="tab_discountticket_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="tab_productdetail_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="amallv3_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="my_star_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="discont_ticket_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffffffff</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="order_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/text_grey_heavy</item>
+        <item name="tabIndicatorColor">@color/blue</item>
+    </style>
+
+    <style name="manage_user_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="productdetail_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="publisher_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#E5524B</item>
+        <item name="tabTextColor">#24242E</item>
+        <item name="tabIndicatorColor">#E5524B</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="amallv3_mygroup_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#fff3594f</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="amallv3_exchange_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#fff3594f</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+
+    <style name="amallv3_order_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#fff3594f</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="wenbantong_order_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#ffa98f60</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffa98f60</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="productdetail_tabv2">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#ffe55c40</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="amallv3_mystar_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/black</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="amallv3_discount_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#ffe55c40</item>
+        <item name="tabTextColor">@color/black</item>
+        <item name="tabIndicatorColor">#ffe55c40</item>
+        <item name="tabIndicatorHeight">2dp</item>
+    </style>
+
+    <style name="store_detail_tab_textv3">
+        <item name="android:textSize">15dp</item>
+    </style>
+    <style name="store_detail_tab_textv3_selected">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="store_detail_tabv3">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/grey_light</item>
+        <item name="tabTextColor">@color/white</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+    <style name="store_detail_tab">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">@color/blue</item>
+        <item name="tabTextColor">@color/text_grey_heavy</item>
+        <item name="tabIndicatorColor">@color/blue</item>
+    </style>
+
+    <style name="expandedtextsize">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="collapsedtextsize">
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="new_wenbantong_img">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">26dp</item>
+    </style>
+
+    <style name="new_wenbantong_banner">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="newlailingjiang_textsize">
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="new_lailingjiang_text">
+        <item name="tabIndicatorFullWidth">false</item>
+        <item name="tabSelectedTextColor">#333333</item>
+        <item name="tabTextColor">@color/grey</item>
+        <item name="tabIndicatorColor">#333333</item>
+        <item name="tabIndicatorHeight">0dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@mipmap/image_new_people_dialog_bg"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23:45:51"
+        android:id="@+id/remaintime"
+        app:layout_constraintTop_toTopOf="@+id/bg"
+        app:layout_constraintLeft_toLeftOf="@id/bg"
+        android:textColor="#ffffffff"
+        android:textSize="24dp"
+        />
+
+    <ImageView
+        android:layout_width="115dp"
+        android:layout_height="97dp"
+        android:id="@+id/image"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/name"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/bg"
+        app:layout_constrainedWidth="true"
+        android:text="冷敷凝胶组合套 传统秘方炮制 "
+        android:textColor="#ff282828"
+        android:textSize="13dp"
+        />
+
+    <TextView
+        android:layout_marginTop="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="抑菌掌灸膏20g "
+        android:textColor="#ff282828"
+        android:textSize="10dp"
+        android:id="@+id/subtitle"
+        app:layout_constraintRight_toRightOf="@id/name"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价值"
+        android:id="@+id/label"
+        android:textColor="#ff282828"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toLeftOf="@id/subtitle"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="198"
+        android:layout_marginLeft="4dp"
+        android:textSize="30dp"
+        android:includeFontPadding="false"
+        android:id="@+id/price"
+        android:layout_marginBottom="-5dp"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toBottomOf="@id/label"
+        app:layout_constraintLeft_toRightOf="@id/label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        android:id="@+id/label1"
+        android:textColor="#ff282828"
+        android:textSize="13dp"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        app:layout_constraintTop_toTopOf="@id/label"
+        android:textStyle="bold"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/label"
+        />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:paddingHorizontal="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/close"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/image_new_people_close"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

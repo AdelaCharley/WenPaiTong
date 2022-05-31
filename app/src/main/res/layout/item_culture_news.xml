@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="17dp"
+    android:id="@+id/layout"
+    android:layout_marginTop="17dp"
+    android:background="@drawable/bg_white_r9"
+    android:paddingHorizontal="9dp"
+    android:paddingVertical="9dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/news_poster"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/allcorners_10"/>
+
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:textColor="#312E2A"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/news_poster"
+        tools:text="方恒东景看附近的勘界看" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:id="@+id/companyavatar"
+        app:layout_constraintTop_toTopOf="@id/news_time"
+        app:layout_constraintBottom_toBottomOf="@id/news_time"
+        app:layout_constraintLeft_toLeftOf="@id/news_poster"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ffa98f60"
+        android:layout_marginLeft="8dp"
+        android:textSize="12dp"
+        android:id="@+id/company_name"
+        app:layout_constraintTop_toTopOf="@id/companyavatar"
+        app:layout_constraintBottom_toBottomOf="@id/companyavatar"
+        app:layout_constraintLeft_toRightOf="@id/companyavatar"
+        />
+
+    <TextView
+        android:id="@+id/news_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:textColor="#66645F"
+        android:text=""
+        android:textSize="12dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintRight_toRightOf="@id/news_poster"
+        app:layout_constraintTop_toBottomOf="@+id/news_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

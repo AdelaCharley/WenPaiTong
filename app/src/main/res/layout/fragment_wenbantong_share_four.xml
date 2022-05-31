@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".equnshang.fragment.WenBanTongShare_OneFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/bg"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/image_wenbantong_share_four"/>
+
+        <ImageView
+            android:layout_width="41dp"
+            android:layout_height="34dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="21dp"
+            android:id="@+id/image_logo"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="34dp"
+            android:src="@mipmap/image_wenbantong_share_qunpiaologo_one"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精选拍品"
+            app:layout_constraintTop_toTopOf="@id/image_logo"
+            app:layout_constraintLeft_toRightOf="@id/image_logo"
+            android:layout_marginLeft="16dp"
+            android:textColor="#ff000000"
+            android:includeFontPadding="false"
+            android:textSize="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="限量珍藏·保利增值"
+            android:textColor="#ff000000"
+            android:textSize="10dp"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="@id/image_logo"
+            app:layout_constraintLeft_toRightOf="@id/image_logo"
+            android:layout_marginLeft="16dp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="25dp"
+            android:paddingRight="13dp"
+            android:background="@drawable/bg_wenbantong_share_one_user"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="4dp"
+                android:id="@+id/circleimage"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的群票好友"
+                android:textColor="#ff333333"
+                android:textSize="11dp"
+                app:layout_constraintTop_toTopOf="@id/circleimage"
+                app:layout_constraintLeft_toRightOf="@id/circleimage"
+                android:includeFontPadding="false"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="0dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐了一个好物给你"
+                android:textColor="#ff999999"
+                android:textSize="11dp"
+                android:layout_marginLeft="3dp"
+                android:includeFontPadding="false"
+                app:layout_constraintLeft_toRightOf="@id/circleimage"
+                app:layout_constraintBottom_toBottomOf="@id/circleimage"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="162dp"
+            android:background="@color/blue"
+            android:id="@+id/layout_image"
+            android:layout_marginHorizontal="25dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/image_product"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintRight_toRightOf="parent"
+                app:shapeAppearance="@style/new_wenbantong_img"
+                app:layout_constrainedHeight="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="特卖价"
+                android:textColor="#ffffffff"
+                android:id="@+id/temaijia"
+                android:textSize="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintLeft_toLeftOf="@id/image_product"
+                app:layout_constraintTop_toBottomOf="@id/image_product"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 W"
+                android:textColor="#fff03867"
+                android:layout_marginLeft="15dp"
+                android:includeFontPadding="false"
+                android:textSize="20dp"
+                app:layout_constraintTop_toTopOf="@id/temaijia"
+                app:layout_constraintBottom_toBottomOf="@id/temaijia"
+                app:layout_constraintLeft_toRightOf="@id/temaijia"
+                android:id="@+id/product_price"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="原价4000万"
+                android:id="@+id/originalprice"
+                app:layout_constraintTop_toTopOf="@id/product_price"
+                app:layout_constraintBottom_toBottomOf="@id/product_price"
+                app:layout_constraintLeft_toRightOf="@id/product_price"
+                android:layout_marginLeft="11dp"
+                android:textColor="#fff03867"
+                android:textSize="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toTopOf="@id/originalprice"
+                app:layout_constraintBottom_toBottomOf="@id/originalprice"
+                app:layout_constraintLeft_toLeftOf="@id/originalprice"
+                app:layout_constraintRight_toRightOf="@id/originalprice"
+                android:background="#fff03867"
+                app:layout_constrainedWidth="true"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/layout_tags"
+                app:layout_constraintLeft_toLeftOf="@id/product_price"
+                app:layout_constraintTop_toBottomOf="@id/product_price">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="限时六折"
+                    android:paddingVertical="3dp"
+                    android:id="@+id/label_discount"
+                    android:layout_marginTop="0dp"
+                    android:visibility="visible"
+                    android:paddingHorizontal="6dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="0dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="@drawable/bg_new_wenbantong_discount_label"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="#ffffffff"
+                    android:textSize="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#ff312e2a"
+                    android:paddingVertical="3dp"
+                    android:id="@+id/labelnew_wenbantong_count"
+                    android:paddingHorizontal="6dp"
+                    android:background="@drawable/bg_new_wenbantong_label_wenbantongcount"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/label_discount"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@id/label_discount"
+                    app:layout_constraintBottom_toBottomOf="@id/label_discount"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/label_new_wenbantong_stock"
+                    android:paddingLeft="38dp"
+                    android:includeFontPadding="false"
+                    android:paddingVertical="3dp"
+                    android:paddingRight="7dp"
+                    android:background="@drawable/bg_new_wenbantong_stock"
+                    app:layout_constraintTop_toTopOf="@id/labelnew_wenbantong_count"
+                    app:layout_constraintBottom_toBottomOf="@id/labelnew_wenbantong_count"
+                    app:layout_constraintLeft_toRightOf="@id/labelnew_wenbantong_count"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="10dp"
+                    />
+
+                <TextView
+                    app:layout_constraintLeft_toLeftOf="@id/label_new_wenbantong_stock"
+                    app:layout_constraintTop_toTopOf="@id/label_new_wenbantong_stock"
+                    app:layout_constraintBottom_toBottomOf="@id/label_new_wenbantong_stock"
+                    android:layout_width="33dp"
+                    android:paddingVertical="3dp"
+                    android:includeFontPadding="false"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="限量"
+                    android:background="@drawable/bg_new_wenbantong_label_wenbantongcount"
+                    android:textColor="#ff3b3b3b"
+                    android:textSize="10dp"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精选拍品 · 限量珍藏 · 保利增值"
+            android:textColor="#ff1e1e1e"
+            android:textSize="13dp"
+            android:id="@+id/label1"
+            android:layout_marginTop="33dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="国家级工艺美术大师王怀俊先生扛鼎之作“盛世欢歌”系列瓷板画"
+            android:textColor="#ff575c63"
+            android:textSize="13dp"
+            android:id="@+id/label2"
+            app:layout_constraintRight_toLeftOf="@id/parent1"
+            app:layout_constrainedWidth="true"
+            android:layout_marginTop="94dp"
+            android:layout_marginRight="28dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/label1"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_radius_white"
+            android:id="@+id/parent1"
+            app:layout_constraintTop_toTopOf="@id/image_logo"
+            app:layout_constraintRight_toRightOf="@id/layout_image"
+            app:layout_constraintBottom_toBottomOf="@id/image_logo"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="79dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="5dp"
+                android:id="@+id/image_qrcode"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

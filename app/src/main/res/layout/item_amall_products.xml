@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/amall_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="16.5dp"
+        android:id="@+id/image_product"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="16.5dp"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13dp"
+        android:id="@+id/name_product"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text=""
+        android:layout_marginTop="10dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@id/image_product"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/blue"
+        android:text="粉丝零售价"
+        android:layout_marginBottom="6dp"
+        android:id="@+id/label_text"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_product"
+        app:layout_constraintLeft_toRightOf="@+id/image_product"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12dp"
+        android:textColor="@color/blue"
+        android:id="@+id/price_product"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintLeft_toLeftOf="@id/label_text"
+        app:layout_constraintRight_toRightOf="@id/label_text"
+        app:layout_constraintBottom_toTopOf="@id/label_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/image_product"
+        android:layout_marginLeft="10dp"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@id/price_product"
+        android:id="@+id/label_fanprice"
+        android:text="粉丝零售价："/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fangroupprice"
+        android:text=""
+        android:textSize="12dp"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/label_fanprice"
+        app:layout_constraintTop_toTopOf="@id/label_fanprice"
+        app:layout_constraintBottom_toBottomOf="@id/label_fanprice"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line_fansprice"
+        app:layout_constrainedWidth="true"
+        app:layout_constrainedHeight="true"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/fangroupprice"
+        app:layout_constraintRight_toRightOf="@id/fangroupprice"
+        app:layout_constraintTop_toTopOf="@id/fangroupprice"
+        app:layout_constraintBottom_toBottomOf="@id/fangroupprice"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="13.5dp"
+        android:background="@drawable/bg_grey_line"
+        android:id="@+id/line"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_product"
+        app:layout_constraintLeft_toRightOf="@+id/label_text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/blue"
+        android:text="￥121"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/group_price"
+        app:layout_constraintBottom_toBottomOf="@id/label_text"
+        app:layout_constraintLeft_toRightOf="@+id/line"/>
+
+    <TextView
+        android:id="@+id/label_pregroupprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:text="预售团购价"
+        android:textColor="@color/blue"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/label_text"
+        app:layout_constraintRight_toRightOf="@id/name_product" />
+
+    <ProgressBar
+        android:id="@+id/group_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="3dp"
+        android:max="10"
+        android:progress="1"
+        android:progressDrawable="@drawable/background_progress"
+        app:layout_constraintBottom_toTopOf="@id/group_price"
+        app:layout_constraintRight_toRightOf="@id/total_count_group"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toRightOf="@id/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:text=""
+        android:layout_marginBottom="3dp"
+        android:id="@+id/current_count_group"
+        app:layout_constraintLeft_toLeftOf="@id/group_price"
+        app:layout_constraintBottom_toTopOf="@id/group_progress"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:text="共10件"
+        android:id="@+id/total_count_group"
+        app:layout_constraintBottom_toBottomOf="@id/current_count_group"
+        app:layout_constraintTop_toTopOf="@id/current_count_group"
+        app:layout_constraintRight_toRightOf="@id/label_pregroupprice"
+        android:layout_marginRight="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

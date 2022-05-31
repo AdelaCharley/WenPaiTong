@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_marginRight="20dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="@id/layout"
+        app:layout_constraintLeft_toLeftOf="@id/cir"
+        app:layout_constraintRight_toRightOf="@id/cir"
+        app:layout_constraintBottom_toTopOf="@id/cir"
+        app:layout_constrainedHeight="true"/>
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/cir"
+        app:layout_constraintRight_toRightOf="@id/cir"
+        app:layout_constraintTop_toBottomOf="@id/cir"
+        app:layout_constrainedHeight="true"/>
+    
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/cir"
+        android:layout_marginLeft="22dp"
+        android:src="@mipmap/manage_user_circle"
+        app:layout_constraintTop_toTopOf="@id/layout"
+        app:layout_constraintBottom_toBottomOf="@id/layout"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_manage_user_item"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/cir"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="14dp"
+            android:layout_marginLeft="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/uname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="3dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            app:layout_constraintTop_toTopOf="@id/image" />
+
+        <TextView
+            android:id="@+id/uid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintLeft_toRightOf="@id/image" />
+
+        <TextView
+            android:id="@+id/time_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="9dp"
+            app:layout_constraintBottom_toTopOf="@id/time_time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image" />
+
+        <TextView
+            android:id="@+id/time_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="13dp"
+            android:text=""
+            android:textColor="#ff333333"
+            android:textSize="9dp"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/time_day" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="17dp"
+    android:layout_marginTop="17dp"
+    android:background="@drawable/bg_white_r9"
+    android:paddingHorizontal="9dp"
+    android:paddingVertical="9dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_product_poster"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/allcorners_10"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="#312E2A"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_product_poster"
+        app:layout_constraintTop_toTopOf="@+id/img_product_poster"
+        tools:text="                【拍品名称】新鲜水果上市   大荔冬枣5斤/箱 枣香枣脆 等你抢购" />
+
+    <TextView
+        android:id="@+id/tv_discount_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_f5655c_r2"
+        android:gravity="center_vertical"
+        android:textColor="#FFFFFF"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_product_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_product_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_product_name"
+        app:layout_constraintVertical_bias="0.125"
+        tools:text="限时六折" />
+
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_fefaf0_r2"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="1dp"
+        android:textColor="#B8A480"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_product_price"
+        app:layout_constraintStart_toStartOf="@+id/tv_product_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
+        app:layout_constraintVertical_bias="0.45"
+        tools:text="tag" />
+
+    <TextView
+        android:id="@+id/tv_product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45.00"
+        android:textColor="#F5655C"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_product_poster"
+        app:layout_constraintStart_toStartOf="@+id/tv_product_name" />
+
+    <TextView
+        android:id="@+id/tv_del_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="划线价"
+        android:textColor="#66645F"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_product_price"
+        app:layout_constraintStart_toEndOf="@+id/tv_product_price" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintTop_toTopOf="@id/tv_del_price"
+        app:layout_constraintBottom_toBottomOf="@id/tv_del_price"
+        app:layout_constraintLeft_toLeftOf="@id/tv_del_price"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toRightOf="@id/tv_del_price"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

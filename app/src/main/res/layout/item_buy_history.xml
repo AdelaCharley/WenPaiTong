@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="群票会员"
+        android:textColor="#ff333333"
+        android:id="@+id/name"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="24dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="购买时间2021-w-19"
+        android:textColor="#ff999999"
+        android:textSize="13dp"
+        android:id="@+id/buytime"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="23dp"
+        android:background="@color/grey_light"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100元/年"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:id="@+id/price"
+        app:layout_constraintTop_toTopOf="@id/name"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expiredtime"
+        android:text="有效期2023-11-19"
+        android:textColor="#ff999999"
+        android:textSize="13dp"
+        app:layout_constraintTop_toTopOf="@id/buytime"
+        app:layout_constraintBottom_toBottomOf="@id/buytime"
+        app:layout_constraintRight_toRightOf="@id/price"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

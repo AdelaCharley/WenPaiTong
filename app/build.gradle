@@ -1,0 +1,253 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "com.qunshang.wenpaitong"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 314
+        versionName "3.1.4"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk { abiFilters  'arm64-v8a','armeabi-v7a'
+            //, 'x86_64'
+
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.qunshang.wenpaitong",
+                JPUSH_APPKEY : "ad0c770af2b28736209c382c", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                //MEIZU_APPKEY : "MZ-魅族的APPKEY",
+                //MEIZU_APPID : "MZ-魅族的APPID",
+                XIAOMI_APPID : "MI-2882303761519934203",
+                XIAOMI_APPKEY : "MI-5681993452203",
+                OPPO_APPKEY : "OP-e764ae29ddbf407b981b9065db433528",
+                OPPO_APPID : "OP-30537947",
+                OPPO_APPSECRET : "OP-5349effecd254ead8b2fe76ccb82f19c",
+                VIVO_APPKEY : "318d581453884a80bae255d09bff4b6c",
+                VIVO_APPID : "105486803"
+        ]
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++17'
+            }
+        }
+    }
+    signingConfigs {
+        debugConfig {
+            storeFile file("equnshang.keystore")
+            storePassword "poqmuw"
+            keyAlias "equnshang"
+            keyPassword "poqmuw"
+        }
+        testConfig {
+            storeFile file("equnshang.keystore")
+            storePassword "poqmuw"
+            keyAlias "equnshang"
+            keyPassword "poqmuw"
+        }
+        releaseConfig {
+            storeFile file("equnshang.keystore")
+            storePassword "poqmuw"
+            keyAlias "equnshang"
+            keyPassword "poqmuw"
+        }
+    }
+    buildTypes {
+        debug {
+            //实现自动签名
+            signingConfig signingConfigs.debugConfig
+        }
+        //测试环境
+        Test {
+            signingConfig signingConfigs.testConfig
+        }
+        //生产环境
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.releaseConfig
+        }
+    }
+
+    buildFeatures{
+        //dataBinding = true
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions{
+        jvmTarget = "1.8"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets {
+                srcDirs 'src\\main\\assets', 'src\\main\\assets\\video'
+            }
+        }
+        androidTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    externalNativeBuild {
+        cmake {
+            path file('src/main/cpp/CMakeLists.txt')
+            version '3.10.2'
+        }
+    }
+}
+
+dependencies {
+    implementation  'de.hdodenhof:circleimageview:3.1.0'
+    implementation  fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    //implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.0-rc1'
+    //implementation 'org.projectlombok:lombok:1.18.20'
+    //implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    //implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    //implementation 'androidx.navigation:navigation-ui:2.3.5'
+    //implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    //implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.3.5'
+    //implementation 'com.android.support:percent:28.0.0'
+    //implementation 'androidx.preference:preference:1.1.1'
+    //annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+    implementation 'io.coil-kt:coil:1.3.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    debugImplementation  'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //注解类BindView
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0-beta05'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.androidkun:XTabLayout:1.1.4'
+    //implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'com.airbnb.android:lottie:2.8.0'
+    implementation "androidx.core:core-ktx:1.7.0"
+    //implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    //implementation 'com.github.markzhai:blockcanary-android:1.5.0'
+    /*****视频播放*****/
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-java:3.3.5'//播放器
+    implementation 'xyz.doikki.android.dkplayer:player-ijk:3.3.3'   //使用ijkplayer进行解码
+    implementation 'xyz.doikki.android.dkplayer:videocache:3.3.3'   //抖音预加载
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-ui:3.3.5' //UI控制器
+    //implementation 'com.github.donkingliang:LabelsView:1.6.5'   //标签（单选、复选）
+    //implementation 'com.github.HuanTanSheng:EasyPhotos:3.1.3'   //相机
+    //debugImplementation 'com.didichuxing.doraemonkit:dokitx:3.3.5'
+    //releaseImplementation 'com.didichuxing.doraemonkit:dokitx-no-op:3.3.5'
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:Common:3.1.0'
+    implementation 'com.github.gzu-liyujiang.AndroidPicker:AddressPicker:3.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.kongzue.dialog_v3x:dialog:3.2.4'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.gitee.zjianxin:MarqueeTextView:1.1'
+    implementation 'com.davemorrissey.labs:subsampling-scale-image-view-androidx:3.10.0'
+    //implementation 'com.github.crazyandcoder:citypicker:6.0.2'
+    implementation ('com.tencent.qcloud:cosxml:5.5.3') {
+        exclude group: 'com.tencent.qcloud', module: 'mtaUtils' //关闭 mta 上报功能}
+    }
+    implementation 'com.github.li-xiaojun:XPopup:2.5.8'
+    implementation 'me.laoyuyu.aria:core:3.8.16'
+    kapt 'me.laoyuyu.aria:compiler:3.8.16'
+    implementation "io.reactivex.rxjava3:rxjava:3.1.1"
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation project(':zxinglibrary')
+    implementation project(':citypickerview')
+    //implementation project(':cardviewpager')
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    //api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
+
+    
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.amap.api:3dmap:latest.integration'
+    implementation 'com.zhihu.android:matisse:0.5.3-beta3'
+    implementation 'com.github.maning0303:MNZXingCode:V2.1.9'
+    //implementation 'com.github.jenly1314:zxing-lite:2.1.1'
+    //implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+    implementation  'com.liulishuo.filedownloader:library:1.7.7'
+    //implementation  'me.panpf:sketch:2.7.0'
+    //implementation  'me.panpf:sketch-gif:2.7.0'
+
+    implementation  'com.github.tbruyelle:rxpermissions:0.12'
+
+    implementation  'cn.bertsir.zbarLibary:zbarlibary:1.4.2'
+
+    implementation  'com.umeng.umsdk:common:9.4.2'// 必选
+    implementation  'com.umeng.umsdk:asms:1.4.1'// 必选
+
+    implementation  'com.umeng.umsdk:abtest:1.0.0'//使用U-App中ABTest能力，可选
+
+    implementation  'com.umeng.umsdk:asms:1.4.1'
+    implementation  'com.umeng.umsdk:apm:1.5.2'
+    implementation  'com.shizhefei:LargeImageView:1.1.0'
+    //kapt "androidx.databinding:databinding-compiler:7.0.4"
+
+    implementation 'com.github.sdfdzx:VRShow:v1.0.2'
+    //implementation 'com.github.DymanZy:EasyShow3D:1.2'
+    implementation 'cn.jiguang.sdk:jcore:3.1.2'  // 此处以JCore 2.7.2 版本为例。
+    implementation 'cn.jiguang.sdk:jpush:4.5.0'  // 此处以JPush 4.0.0 版本为例
+    // 接入华为厂商
+    implementation 'com.huawei.hms:push:5.3.0.301'
+    implementation 'cn.jiguang.sdk.plugin:huawei:4.5.0'// 极光厂商插件版本与接入 JPush 版本保持一致，下同
+    // 接入 FCM 厂商
+    //implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    //implementation 'cn.jiguang.sdk.plugin:fcm:4.5.0'
+    // 接入魅族厂商
+    //implementation 'cn.jiguang.sdk.plugin:meizu:4.5.0'
+    // 接入 VIVO 厂商
+    implementation 'cn.jiguang.sdk.plugin:vivo:4.5.0'
+    // 接入 OPPO 厂商
+    implementation 'cn.jiguang.sdk.plugin:oppo:4.5.0'
+    // 接入小米厂商
+    implementation 'cn.jiguang.sdk.plugin:xiaomi:4.5.0'
+
+    implementation 'me.jessyan:autosize:1.2.1'  //发布的时候加上去
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+
+    //implementation 'com.zarinpal:cardviewpager:0.5.3'
+    //implementation 'com.kyleduo.switchbutton:library:2.1.0'
+    //implementation 'androidx.cardview:cardview:1.0.0'
+    //implementation 'com.shuhart.bubblepagerindicator:bubblepagerindicator:1.0.6'
+}
+
+/*repositories {
+    mavenCentral()
+}*/
+//apply plugin: 'com.google.gms.google-services'
+//id plugin: 'com.huawei.agconnect'

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:layout_marginStart="12dp"
+    android:layout_marginBottom="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvNickname"
+        style="@style/Tv.White"
+        android:text="\@大致爱高清"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        tools:ignore="HardcodedText" />
+
+    <com.qunshang.wenpaitong.equnshang.view.AutoLinkTextView
+        android:id="@+id/autoLinkTextView"
+        style="@style/Tv.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/text_nonsense_sentence"
+        android:textSize="15dp"
+        android:gravity="left"
+        android:layout_marginTop="13dp"
+        app:highlight_textcolor="@color/color_link"/>
+
+    <TextView
+        android:id="@+id/tvCreateTime"
+        style="@style/Tv.White"
+        android:layout_marginTop="18dp"
+        android:text="@string/text_nonsense_time_1"
+        android:textSize="11dp"/>
+</LinearLayout>

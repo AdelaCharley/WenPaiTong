@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="7dp"
+    android:layout_marginVertical="7dp"
+    android:background="@drawable/bg_white_r7">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/topcorners_7dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="7dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="新鲜水果上市 大荔冬枣 5斤/箱 枣香枣脆..."
+        android:textColor="#ff333333"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/image" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/bg_fdf4e9_r2"
+        android:paddingHorizontal="7dp"
+        android:paddingVertical="3dp"
+        android:text="四返一"
+        android:textColor="#ffe2b16b"
+        android:textSize="11sp"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/price_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="17dp"
+        android:text="￥"
+        android:textColor="#ffe25451"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@id/label" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="-2dp"
+        android:text="39.6"
+        android:textColor="#ffe25451"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/price_symbol"
+        app:layout_constraintLeft_toLeftOf="@id/name"
+        app:layout_constraintStart_toEndOf="@+id/price_symbol"
+        app:layout_constraintTop_toBottomOf="@id/label"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/originalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="￥120"
+        android:textColor="#999999"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        app:layout_constraintLeft_toRightOf="@id/price" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/originalprice"
+        app:layout_constraintLeft_toLeftOf="@id/originalprice"
+        app:layout_constraintRight_toRightOf="@id/originalprice"
+        app:layout_constraintTop_toTopOf="@id/originalprice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

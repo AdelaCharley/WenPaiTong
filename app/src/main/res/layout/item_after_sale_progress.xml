@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/line_left"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        android:background="#32C126"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/node_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/circle_32c126_r8"
+        app:layout_constraintBottom_toBottomOf="@+id/line_left"
+        app:layout_constraintStart_toEndOf="@+id/line_left"
+        app:layout_constraintTop_toTopOf="@+id/line_left" />
+
+    <View
+        android:id="@+id/line_right"
+        android:layout_width="20dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="5dp"
+        android:background="#32C126"
+        app:layout_constraintStart_toEndOf="@+id/node_default"
+        app:layout_constraintTop_toTopOf="@+id/line_left" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        tools:text="TextView"
+        android:textSize="12dp"
+        android:textColor="#333333"
+        app:layout_constraintEnd_toEndOf="@+id/node_default"
+        app:layout_constraintStart_toStartOf="@+id/node_default"
+        app:layout_constraintTop_toBottomOf="@+id/node_default" />
+</androidx.constraintlayout.widget.ConstraintLayout>

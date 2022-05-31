@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_share_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingHorizontal="15dp"
+        android:background="@color/white">
+
+        <include layout="@layout/layout_toolbar" android:id="@+id/top"/>
+
+        <!--<TextView
+            style="@style/Tv.Black.Title"
+            android:text="@string/title_share_qrcode"
+            android:textSize="14sp"/>
+
+        <ImageView
+            style="@style/Iv.Return"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_more_black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>-->
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_share_title"
+        ><!--android:background="@mipmap/bg_share"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="290dp"
+            android:layout_marginBottom="140dp">
+
+            <ImageView
+                android:id="@+id/iv_share_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="90dp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/iv_share_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="160dp"
+                android:src="@mipmap/iv_head_boy"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/blue"
+        android:text="@string/btn_share"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+</RelativeLayout>

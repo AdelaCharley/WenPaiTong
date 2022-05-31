@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_r9">
+
+    <ImageView
+        android:id="@+id/img_store_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="20.5dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_store_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="21dp"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/img_store_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="xx店" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_goods"
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="17.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_store_name"
+        app:shapeAppearance="@style/allcorners_7"
+        tools:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_goods_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="21.5dp"
+        android:ellipsize="end"
+        android:lines="2"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_goods"
+        app:layout_constraintTop_toTopOf="@+id/img_goods"
+        tools:text="江音琵琶6915-1演奏演出五弦琵琶鸡翅 木材质抛光弹拨乐器 江音琵琶6915-1演奏演出五弦琵琶鸡翅 木材质抛光弹拨乐器" />
+
+    <TextView
+        android:id="@+id/tv_goods_spec"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.5dp"
+        android:textColor="#999999"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_goods_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_goods_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_goods_name"
+        tools:text="规格：规格24瓶" />
+
+    <TextView
+        android:id="@+id/tv_price_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥"
+        android:textColor="#F3594F"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_goods"
+        app:layout_constraintStart_toStartOf="@+id/tv_goods_spec" />
+
+    <TextView
+        android:id="@+id/tv_goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-2dp"
+        android:textColor="#F3594F"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_price_symbol"
+        app:layout_constraintStart_toEndOf="@+id/tv_price_symbol"
+        tools:text="219.00" />
+
+    <TextView
+        android:id="@+id/tv_goods_quantity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="bottom|end"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_goods_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_goods_price"
+        app:layout_constraintTop_toTopOf="@+id/tv_goods_price"
+        tools:text="申请数量: 1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

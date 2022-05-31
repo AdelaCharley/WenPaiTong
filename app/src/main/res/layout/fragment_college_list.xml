@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:id="@+id/root"
+    tools:context=".equnshang.fragment.CollegeListFragment">
+
+    <include layout="@layout/layout_toolbar" android:id="@+id/top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintBottom_toBottomOf="@id/root"
+        app:layout_constrainedHeight="true"
+        android:layout_marginHorizontal="10dp"
+        android:paddingTop="3dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_college_new_list" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="@id/layout"
+        android:includeFontPadding="false"
+        android:text="推荐已更新"
+        android:background="#41E5524B"
+        android:id="@+id/showtext"
+        android:textColor="#ffe5524b"
+        android:textSize="14dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:gravity="center"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

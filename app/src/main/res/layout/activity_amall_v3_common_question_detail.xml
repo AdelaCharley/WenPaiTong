@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".equnshang.activity.AMallV3CommonQuestionDetailActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/titlestr"
+        android:text="拼团有效期是多久？"
+        android:textColor="#ff333333"
+        android:textSize="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginVertical="7dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffcccccc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拼团有效期是多久？"
+        android:id="@+id/content"
+        android:textColor="#ff333333"
+        android:textSize="14dp"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="16dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LlVCenter"
+    android:id="@+id/item_my_myhomepage_layout">
+    <TextView
+        android:id="@+id/tv_number"
+        style="@style/Tv.White"
+        android:text="@string/text_nonsense_number"
+        android:textSize="10dp"/>
+    <TextView
+        android:id="@+id/tv_text"
+        style="@style/Tv.White"
+        android:text="@string/text_nonsense_words"
+        android:textSize="10dp"/>
+</LinearLayout>

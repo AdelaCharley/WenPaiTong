@@ -1,0 +1,47 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Address">
+
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+        <EditTextPreference
+            android:defaultValue="Default value"
+            android:key="edit_text_preference_1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Edit text preference" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Tags" />
+
+    <PreferenceCategory app:title="SettingDefault">
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="提醒：每次下单会默认推荐使用该地址"-->
+<!--            app:summaryOn="提醒：每次下单会默认推荐使用该地址"-->
+<!--            app:title="设置默认地址" />-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

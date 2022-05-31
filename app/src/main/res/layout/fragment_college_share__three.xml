@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".equnshang.fragment.CollegeShare_OneFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/root"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearance="@style/allcorners_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/bg"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constrainedWidth="true"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/image_share_college_bg_three"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginHorizontal="28dp"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="37.5dp"
+                android:src="@mipmap/image_wenbantong_share_qunpiaologo_one"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="31dp"
+                android:id="@+id/logo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                app:layout_constraintLeft_toLeftOf="@id/title"
+                app:layout_constraintRight_toRightOf="@id/title"
+                app:layout_constrainedWidth="true"
+                android:id="@+id/layout1"
+                android:layout_marginTop="13.5dp"
+                android:background="@drawable/bg_wenbantong_share_one_user">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="19.5dp"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constrainedWidth="true"
+                    android:layout_marginRight="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="@drawable/bg_wenbantong_five_usericons"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    tools:src="@mipmap/ic_launcher"
+                    android:layout_margin="3dp"
+                    android:id="@+id/circleimage"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您的群票好友"
+                    android:textColor="#ffa24b4e"
+                    android:textSize="8.5dp"
+                    android:textStyle="bold"
+                    android:id="@+id/username"
+                    app:layout_constraintTop_toTopOf="@id/circleimage"
+                    app:layout_constraintBottom_toBottomOf="@id/circleimage"
+                    app:layout_constraintLeft_toRightOf="@id/circleimage"
+                    android:includeFontPadding="false"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="0dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="推荐了一篇资讯给你"
+                    android:textColor="#ffa24b4e"
+                    android:textSize="8.5dp"
+                    android:layout_marginLeft="7dp"
+                    android:includeFontPadding="false"
+                    app:layout_constraintTop_toTopOf="@id/circleimage"
+                    app:layout_constraintLeft_toRightOf="@id/username"
+                    android:layout_marginRight="9dp"
+                    app:layout_constraintBottom_toBottomOf="@id/circleimage"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="政策大数据 | “数字产业化、产业数字化到底是什么？"
+                android:id="@+id/title"
+                android:gravity="center"
+                android:layout_marginHorizontal="22.5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                app:layout_constraintTop_toBottomOf="@id/layout1"
+                android:textColor="#ff333333"
+                android:textSize="13.5dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“数字产业化”“产业数字化”多次出现在今年的政府工作报告和《中华人民共和国国民经济和社会发展第十四个..."
+                android:textColor="#ff333333"
+                android:textSize="10.5dp"
+                android:layout_marginTop="22.5dp"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/subtitle"
+                app:layout_constraintTop_toBottomOf="@id/title"
+                />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:layout_constraintTop_toBottomOf="@id/subtitle"
+                android:src="@mipmap/image_three_book"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20.5dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="59dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="59dp"
+            android:id="@+id/image_qrcode"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginRight="37.5dp"
+            android:layout_marginBottom="27dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多资讯，等你发现"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:id="@+id/morenews"
+            android:includeFontPadding="false"
+            android:textSize="12dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintLeft_toLeftOf="@id/changanshibie"
+            app:layout_constraintBottom_toBottomOf="@id/image_qrcode"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长按识别二维码进入群票"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="12dp"
+            android:id="@+id/changanshibie"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintBottom_toTopOf="@id/morenews"
+            android:layout_marginRight="15dp"
+            app:layout_constraintRight_toLeftOf="@id/image_qrcode"
+            app:layout_constraintBottom_toBottomOf="@id/image_qrcode"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

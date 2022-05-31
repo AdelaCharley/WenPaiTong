@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".equnshang.activity.StoreDetailActivityV2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_store_detail_v2">
+
+        <ImageView
+            android:id="@+id/toolbar_back"
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:src="@mipmap/img_store_detail_v2_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/search_layoout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_3f3f3f_r7"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/toolbar_back"
+            app:layout_constraintRight_toLeftOf="@id/toolbar_right_image"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="14.5dp"
+                android:layout_height="14.5dp"
+                android:layout_margin="7dp"
+                android:src="@drawable/search_shen" />
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入搜索内容"
+                android:maxLines="1"
+                android:textSize="13dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/toolbar_right_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="17.5dp"
+            android:padding="10dp"
+            android:src="@mipmap/img_store_detail_share"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_store_detail_v2"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_storer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:scaleType="center"
+            android:layout_marginTop="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/allcorners_7" />
+
+        <TextView
+            android:id="@+id/store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintLeft_toRightOf="@id/image_storer"
+            app:layout_constraintTop_toTopOf="@id/image_storer"
+            tools:text="店名" />
+
+        <TextView
+            android:id="@+id/salecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/image_storer"
+            app:layout_constraintLeft_toRightOf="@id/image_storer"
+            tools:text="总售 xx件" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_concern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_store_detailv2_concern"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/image_storer"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_storer">
+
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="-6dp"
+                android:src="@mipmap/image_store_detail_unstar"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/concern"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:text="收藏"
+                android:textColor="#ffffffff"
+                android:textSize="13dp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="25dp"
+        android:background="@color/bg_color_store_detail_v2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商品"
+            android:id="@+id/text1"
+            android:textColor="#ffffffff"
+            android:textStyle="bold"
+            android:layout_marginRight="77dp"
+            android:textSize="17dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频"
+            android:id="@+id/text2"
+            android:textColor="#ffffffff"
+            android:textSize="15dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--<com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        style="@style/store_detail_tabv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color_store_detail_v2"
+        android:paddingVertical="10dp"
+        app:tabTextAppearance="@style/store_detail_tab_textv3" />-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:background="@color/white"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

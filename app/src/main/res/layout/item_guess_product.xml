@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="32dp"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:adjustViewBounds="false"
+        android:scaleType="center"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constrainedWidth="true"
+        tools:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:shapeAppearance="@style/allcorners_7"
+        android:id="@+id/image"/>
+
+    <TextView
+        android:layout_marginTop="7dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:includeFontPadding="false"
+        android:id="@+id/name"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        android:text=""
+        android:textColor="#ff333333"
+        android:textSize="13dp"
+        />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:paddingHorizontal="11dp"
+        android:paddingVertical="3dp"
+        android:text="四返一"
+        android:textColor="#E2B16B"
+        android:textSize="9dp"
+        android:background="@drawable/bg_fdf4e9_r2"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <TextView
+        android:id="@+id/price_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:includeFontPadding="false"
+        android:text="￥"
+        android:textColor="#E55C40"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/label" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:includeFontPadding="false"
+        android:text="39.6"
+        android:textColor="#E55C40"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/price_symbol"
+        app:layout_constraintTop_toBottomOf="@id/label" />
+
+    <TextView
+        android:id="@+id/price_symbol2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="1dp"
+        android:includeFontPadding="false"
+        android:text="￥"
+        android:textColor="#B3B3B3"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintStart_toEndOf="@+id/price" />
+
+    <TextView
+        android:id="@+id/originalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="120"
+        android:textColor="#B3B3B3"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        app:layout_constraintStart_toEndOf="@+id/price_symbol2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="-2dp"
+        android:background="#B3B3B3"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/originalprice"
+        app:layout_constraintLeft_toLeftOf="@id/price_symbol2"
+        app:layout_constraintRight_toRightOf="@id/originalprice"
+        app:layout_constraintTop_toTopOf="@id/originalprice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

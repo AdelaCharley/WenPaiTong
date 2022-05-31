@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="70dp"
+    android:background="@drawable/background_radius_white_top">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout"
+        android:background="@drawable/background_radius_white_top"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff1c1c1c"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="23dp"
+            android:textSize="15dp"
+            android:text="产品参数"
+            android:textStyle="bold"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_spec"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginTop="80dp"
+            android:layout_height="40dp"
+            android:text="确定"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_dialog_specv3"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/confirm"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/grey_light"
+    android:layout_height="match_parent"
+    tools:context=".equnshang.activity.V300PublisherMainHomeActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:background="@drawable/background_radius_greylight_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:collapsedTitleGravity="top"
+                app:contentScrim="@color/white"
+                android:minHeight="30dp"
+                app:collapsedTitleTextAppearance="@style/collapsedtextsize"
+                app:expandedTitleTextAppearance="@style/expandedtextsize"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                >
+                <!--app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+                <!--
+                app:collapsedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded"
+                app:expandedTitleTextAppearance="@style/TextAppearance.Design.CollapsingToolbar.Expanded"-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="174dp"
+                        android:adjustViewBounds="true"
+                        android:id="@+id/top_bg"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:src="@mipmap/bg_300_personal_home_page"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-50dp"
+                        android:background="@drawable/background_radius_greylight_top"
+                        app:layout_constraintTop_toBottomOf="@id/userimage">
+
+                        <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="31dp"
+                            android:gravity="center"
+                            android:text="关注"
+                            android:id="@+id/yiguanzhu"
+                            android:layout_marginTop="15dp"
+                            android:textSize="14dp"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="10dp"
+                            android:paddingVertical="2dp"
+                            android:background="@drawable/bg_v300_publisher_guanzhu"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="10dp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="关注人数"
+                            android:textSize="14dp"
+                            android:textColor="#707070"
+                            android:includeFontPadding="false"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="24dp"
+                            android:id="@+id/label_guanzhurenshu"
+                            app:layout_constraintTop_toBottomOf="@id/yiguanzhu"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- -"
+                            android:textColor="#24242E"
+                            android:layout_marginLeft="9dp"
+                            android:textSize="14dp"
+                            android:includeFontPadding="false"
+                            android:id="@+id/guanzhuresnhu"
+                            app:layout_constraintLeft_toRightOf="@id/label_guanzhurenshu"
+                            app:layout_constraintTop_toTopOf="@id/label_guanzhurenshu"
+                            app:layout_constraintBottom_toBottomOf="@id/label_guanzhurenshu"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="帖子数"
+                            android:textSize="14dp"
+                            android:textColor="#707070"
+                            android:layout_marginLeft="10dp"
+                            android:includeFontPadding="false"
+                            android:id="@+id/label_tiezishu"
+                            app:layout_constraintLeft_toRightOf="@id/guanzhuresnhu"
+                            app:layout_constraintTop_toTopOf="@id/label_guanzhurenshu"
+                            app:layout_constraintBottom_toBottomOf="@id/label_guanzhurenshu"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- -"
+                            android:includeFontPadding="false"
+                            android:textColor="#24242E"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="9dp"
+                            android:id="@+id/tiezishu"
+                            app:layout_constraintLeft_toRightOf="@id/label_tiezishu"
+                            app:layout_constraintTop_toTopOf="@id/label_guanzhurenshu"
+                            app:layout_constraintBottom_toBottomOf="@id/label_guanzhurenshu"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="获赞"
+                            android:textColor="#707070"
+                            android:layout_marginLeft="9dp"
+                            android:includeFontPadding="false"
+                            android:textSize="14dp"
+                            android:id="@+id/label_huozan"
+                            app:layout_constraintLeft_toRightOf="@id/tiezishu"
+                            app:layout_constraintTop_toTopOf="@id/label_guanzhurenshu"
+                            app:layout_constraintBottom_toBottomOf="@id/label_guanzhurenshu"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- -"
+                            android:id="@+id/huozan"
+                            android:textSize="14dp"
+                            android:includeFontPadding="false"
+                            android:textColor="#24242E"
+                            android:layout_marginLeft="9dp"
+                            app:layout_constraintLeft_toRightOf="@id/label_huozan"
+                            app:layout_constraintTop_toTopOf="@id/label_guanzhurenshu"
+                            app:layout_constraintBottom_toBottomOf="@id/label_guanzhurenshu"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:id="@+id/jianjie"
+                            android:textColor="#24242E"
+                            android:textSize="14dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintTop_toBottomOf="@id/label_guanzhurenshu"
+                            app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp"
+                        android:id="@+id/userimage"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-75dp"
+                        app:layout_constraintTop_toBottomOf="@id/top_bg"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="@id/userimage"
+                        app:layout_constraintLeft_toRightOf="@id/userimage"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginBottom="9dp"
+                        android:textSize="14dp"
+                        android:textColor="#24242E"
+                        android:textStyle="bold"
+                        android:id="@+id/username"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="28dp"
+                    app:layout_collapseMode="pin" />
+                <!--app:title="标题"-->
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/tablayout"
+                    app:tabPaddingStart="20dp"
+                    app:tabPaddingEnd="20dp"
+                    android:background="@color/white"
+                    app:tabTextAppearance="@style/amall_textsize"
+                    style="@style/publisher_tab"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+            <androidx.viewpager.widget.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/viewpager"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginTop="39dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_back"
+        android:src="@mipmap/icon_back"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

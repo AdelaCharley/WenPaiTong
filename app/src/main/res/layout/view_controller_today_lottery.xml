@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.qunshang.wenpaitong.equnshang.view.CircleProgressView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:id="@+id/progress"
+                android:visibility="gone"
+                app:startAngle="-90"
+                app:endAngle="270"
+                app:progressWidth="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:id="@+id/progress_internal"
+                android:visibility="gone"
+                android:src="@mipmap/daojishi"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10s"
+            android:visibility="gone"
+            android:layout_marginTop="7dp"
+            android:textSize="12dp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="37dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="20dp"
+            android:src="@mipmap/receive_ticket"
+            android:visibility="gone"
+            android:id="@+id/receive_ticket"/>
+
+        <ImageView
+            android:layout_marginTop="14.5dp"
+            android:layout_width="40dp"
+            android:layout_height="56dp"
+            android:id="@+id/image_activity_detail"
+            android:src="@mipmap/activitydetail"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:layout_marginTop="7dp"
+            android:text="活动详情"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <include layout="@layout/layout_controllerview_titlename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/tittestr"
+        android:layout_marginRight="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_lottery"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <include layout="@layout/layout_controllerview_lottery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_lottery"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <!--<LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNickname"
+            style="@style/Tv.White"
+            android:text="\@大致爱高清"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <com.qunshang.wenpaitong.equnshang.view.AutoLinkTextView
+            android:id="@+id/autoLinkTextView"
+            style="@style/Tv.White"
+            tools:text="@string/text_nonsense_sentence"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:highlight_textcolor="@color/color_link"/>
+
+        <TextView
+            android:id="@+id/tvCreateTime"
+            style="@style/Tv.White"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_nonsense_time_1"
+            android:textSize="12sp"/>
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        tools:ignore="RelativeOverlap">
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="62dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_show_head"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/ivFocus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="3dp"
+                android:src="@mipmap/ic_add_focus"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+
+
+        <ImageView
+            android:id="@+id/ivUp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="30dp"
+            android:src="@mipmap/btn_main_up_false"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvUpCount"
+            style="@style/Tv.White"
+            android:text="@string/text_nonsense_number"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/cbLike"
+            android:src="@mipmap/btn_main_like_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
+
+        <TextView
+            android:id="@+id/tvLikeCount"
+            style="@style/Tv.White"
+            android:text="@string/text_nonsense_number"
+            android:textSize="12sp"/>
+
+        <ImageView
+            android:id="@+id/ivComment"
+            android:src="@mipmap/ic_main_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvCommentCount"
+            style="@style/Tv.White"
+            android:text="@string/text_nonsense_number"
+            android:textSize="12sp"/>
+
+        <TextView
+            style="@style/Tv.White"
+            android:id="@+id/tvShare"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/text_main_invest_code"
+            android:textSize="12sp"
+            app:drawableTopCompat="@mipmap/btn_main_qrcode"/>
+
+
+    </LinearLayout>-->
+
+    <!--<include layout="@layout/layout_controllerview_uplikecomment"
+        app:layout_constraintBottom_toTopOf="@id/tvShare"
+        app:layout_constraintRight_toRightOf="@id/tvShare"
+        app:layout_constraintLeft_toLeftOf="@id/tvShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        style="@style/Tv.White"
+        android:id="@+id/tvShare"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/text_main_invest_code"
+        android:textSize="12sp"
+        app:drawableTopCompat="@mipmap/btn_main_qrcode"/>-->
+
+    <include layout="@layout/layout_controllerview_uplikecomment"
+        app:layout_constraintBottom_toTopOf="@id/layout_brand"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/uplike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="55dp"
+        android:layout_height="65dp"
+        android:orientation="vertical"
+        android:id="@+id/layout_brand"
+        android:src="@mipmap/amall"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/piinhaohuo"
+        app:layout_constraintRight_toRightOf="@id/uplike"
+        app:layout_constraintLeft_toLeftOf="@id/uplike">
+    </androidx.appcompat.widget.AppCompatImageView>
+
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拼好货"
+        android:textColor="#ffffffff"
+        android:textSize="18dp"
+        android:shadowDx="0"
+        android:shadowDy="1"
+        android:shadowRadius="3.0"
+        android:shadowColor="#80000000"
+        android:id="@+id/piinhaohuo"
+        app:layout_constraintRight_toRightOf="@id/uplike"
+        app:layout_constraintLeft_toLeftOf="@id/uplike"
+        />
+
+    <TextView
+        android:id="@+id/novideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="观看10秒视频领抽奖奖券"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

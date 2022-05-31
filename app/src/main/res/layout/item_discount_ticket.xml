@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="18dp"
+    android:background="@drawable/background_radius_white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:text="$5"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        app:layout_constrainedWidth="true"
+        android:textColor="#ff3399ff"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优惠券"
+        android:id="@+id/label"
+        android:textColor="#ff333333"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/price"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="23dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/product_name"
+        android:textColor="#ff333333"
+        android:textSize="15dp"
+        android:layout_marginTop="23dp"
+        app:layout_constrainedWidth="true"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintRight_toLeftOf="@id/gouse"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        android:layout_marginLeft="26dp"
+        android:text="群商网店"/>
+
+    <TextView
+        android:text="0000-00-00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/time"
+        android:textSize="14dp"
+        app:layout_constraintTop_toTopOf="@id/label"
+        app:layout_constraintBottom_toBottomOf="@id/label"
+        app:layout_constraintLeft_toLeftOf="@id/product_name"/>
+
+    <TextView
+        android:id="@+id/aluse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="已使用"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="去使用"
+        android:id="@+id/gouse"
+        android:textColor="#ffffffff"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        android:background="@drawable/bg_gouse"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="7dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

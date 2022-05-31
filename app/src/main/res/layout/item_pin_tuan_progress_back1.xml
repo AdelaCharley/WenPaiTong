@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/line_left"
+        android:layout_width="51dp"
+        android:layout_height="4dp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_center"
+        android:layout_width="33dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="-4dp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/head"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_right"
+        android:layout_width="12dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="-4dp"
+        android:background="#D9D9D9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/node_default"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/head"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/white"
+        android:src="@mipmap/invite_list_addicon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/line_left"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/tv_sign_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"
+        android:background="@drawable/bg_f3594f_fdb29e_r2"
+        android:paddingHorizontal="4dp"
+        android:text="团长"
+        android:textColor="@color/white"
+        android:textSize="7dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/line_left"
+        app:layout_constraintTop_toTopOf="@+id/head" />
+
+    <ImageView
+        android:id="@+id/node_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:src="@drawable/ic_pin_tun_progress_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/line_center"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/node_finished"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_pin_tun_progress_finished"
+        app:layout_constraintBottom_toBottomOf="@+id/node_default"
+        app:layout_constraintEnd_toEndOf="@+id/node_default"
+        app:layout_constraintStart_toStartOf="@+id/node_default"
+        app:layout_constraintTop_toTopOf="@+id/node_default"/>
+
+    <TextView
+        android:id="@+id/node_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="两人成团"
+        android:textColor="#111111"
+        android:textSize="7dp"
+        app:layout_constraintEnd_toEndOf="@+id/node_default"
+        app:layout_constraintStart_toStartOf="@+id/node_default"
+        app:layout_constraintTop_toBottomOf="@+id/node_default" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

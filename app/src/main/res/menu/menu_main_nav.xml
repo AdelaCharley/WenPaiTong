@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:id="@+id/main_fragment"
+            android:title="首页"
+            android:icon="@drawable/ic_main_main" />
+
+        <item android:id="@+id/lottery_fragment"
+            android:title="来领奖"
+            android:icon="@drawable/ic_main_lottery" />
+
+        <item android:id="@+id/partner_fragment"
+            android:title="商学院"
+            android:icon="@drawable/ic_main_partner" />
+
+        <item android:id="@+id/workpoint_fragment"
+            android:title="工分"
+            android:icon="@drawable/ic_main_workpoint" />
+
+        <item android:id="@+id/my_fragment"
+            android:title="我的"
+            android:icon="@drawable/ic_main_my" />
+</menu>

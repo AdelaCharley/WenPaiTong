@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="7dp"
+    android:layout_marginVertical="7dp"
+    android:background="@drawable/background_radius_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_up_video"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:scaleType="center"
+        app:shapeAppearance="@style/topcorners"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/text_up_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textSize="13dp"
+        tools:text="新鲜水果上市大荔冬枣..." />
+
+    <TextView
+        android:id="@+id/tv_create_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="19dp"
+        android:textColor="#666666"
+        android:textSize="13dp"
+        tools:text="2021-12-08" />
+</androidx.appcompat.widget.LinearLayoutCompat>

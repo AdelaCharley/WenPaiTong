@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.ApplyLogoutingActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:id="@+id/line"
+        android:background="@color/grey_light"/>
+
+    <ImageView
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/image_logouting"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="系统处理中"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textColor="#ff333333"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="系统将会在3-5个工作日内给予处理，请耐心等待处理结果"
+        android:textColor="#ff999999"
+        android:layout_marginTop="16dp"
+        android:textSize="11dp"
+        android:gravity="center"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

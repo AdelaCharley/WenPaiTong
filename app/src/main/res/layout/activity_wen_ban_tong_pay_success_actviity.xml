@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".equnshang.activity.PaySuccessActivityV2">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_r9"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/pay_success"
+                    layout="@layout/layout_pay_success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="30dp"
+                    android:paddingBottom="50dp">
+
+                    <Button
+                        android:id="@+id/btn_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_wenbantong_paysuccess_line"
+                        android:minWidth="120dp"
+                        android:minHeight="0dp"
+                        android:paddingVertical="8dp"
+                        android:textColor="#B8A480"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="查看订单" />
+
+                    <Button
+                        android:id="@+id/btn_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:background="@drawable/bg_wenbantong_paysuccess_solid"
+                        android:minWidth="120dp"
+                        android:minHeight="0dp"
+                        android:paddingVertical="8dp"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/btn_left"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="返回首页" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

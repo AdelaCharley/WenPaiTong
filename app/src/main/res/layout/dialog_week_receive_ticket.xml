@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/weektask"
+        android:id="@+id/image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/close_dialog"
+        android:id="@+id/close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:textSize="14dp"
+        android:text="邀请10人为你助力，好礼直接拿"
+        app:layout_constraintBottom_toTopOf="@id/receivetask"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="领取任务"
+        android:id="@+id/receivetask"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_receivetask"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        android:paddingHorizontal="40dp"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="40dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

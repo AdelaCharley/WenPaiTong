@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".equnshang.activity.BMallSearchResultActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_serachs"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/search_layoout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/bg_search_amall"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintRight_toLeftOf="@id/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="14.5dp"
+                android:layout_height="14.5dp"
+                android:layout_margin="7dp"
+                android:src="@mipmap/ic_main_search" />
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:background="@null"
+                android:hint="搜索好货"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textSize="14dp"
+            android:textColor="@color/text_grey"
+            android:layout_marginRight="18dp"
+            android:src="@mipmap/procure_dooperation"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/search_layoout"
+            app:layout_constraintBottom_toBottomOf="@id/search_layoout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_serachs"
+        app:layout_constrainedHeight="true"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:orientation="vertical"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

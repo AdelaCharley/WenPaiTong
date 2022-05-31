@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/vip_day_prize"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/close"
+        android:id="@+id/vip_day_prize_bg"/>
+    
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/vip_prize_receivenow"
+        android:id="@+id/receivenow"
+        app:layout_constraintLeft_toLeftOf="@id/vip_day_prize_bg"
+        app:layout_constraintRight_toRightOf="@id/vip_day_prize_bg"
+        app:layout_constraintBottom_toBottomOf="@id/vip_day_prize_bg"
+        android:layout_marginBottom="50dp"/>
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/image"
+        app:layout_constraintLeft_toLeftOf="@id/vip_day_prize_bg"
+        app:layout_constraintRight_toRightOf="@id/vip_day_prize_bg"
+        app:layout_constraintBottom_toTopOf="@id/receivenow"/>
+
+    <ImageView
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:id="@+id/close"
+        android:src="@mipmap/close_dialog"
+        android:layout_marginTop="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vip_day_prize_bg"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

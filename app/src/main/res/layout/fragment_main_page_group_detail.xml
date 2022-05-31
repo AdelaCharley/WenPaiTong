@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MainPageGroupDetailFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <xyz.doikki.videoplayer.player.VideoView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:id="@+id/videoView"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background_radius_white"
+            android:layout_marginTop="25dp"
+            android:layout_marginHorizontal="17dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/groupmainname"
+                android:textColor="#ff333333"
+                android:gravity="center"
+                android:background="@mipmap/bg_groupmain_info"
+                android:textSize="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/content"
+                android:textSize="13dp"
+                android:layout_marginHorizontal="18dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="24dp"
+                android:textColor="@color/text_grey_heavy"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.core.widget.NestedScrollView>

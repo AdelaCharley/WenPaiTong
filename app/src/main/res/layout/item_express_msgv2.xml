@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/circle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_express_circle_grey"/>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/circle"
+        app:layout_constraintLeft_toLeftOf="@id/circle"
+        app:layout_constraintRight_toRightOf="@id/circle"
+        app:layout_constraintBottom_toBottomOf="@id/info"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        android:background="#ffe6e6e6"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="11dp"
+        app:layout_constraintLeft_toRightOf="@id/circle"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constrainedWidth="true"
+        android:layout_marginRight="20dp"
+        android:textColor="#ff999999"
+        android:layout_height="wrap_content"
+        android:paddingBottom="19dp"
+        android:text="信息"
+        android:textSize="12dp"
+        android:id="@+id/info"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff666666"
+        android:text="2021"
+        android:layout_marginLeft="20dp"
+        android:textSize="12dp"
+        app:layout_constrainedWidth="true"
+        android:id="@+id/time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/circle"
+        app:layout_constraintLeft_toRightOf="@id/circle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

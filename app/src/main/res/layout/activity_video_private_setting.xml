@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".activity.VideoPrivateSettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/layout1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="26dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/icon_back"
+            android:layout_marginVertical="19dp"
+            android:id="@+id/back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:scaleType="fitEnd"/>
+
+        <TextView
+            android:id="@+id/text_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="编辑视频"
+            android:textColor="#ff333333"
+            android:textSize="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout2"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="17dp"
+            android:scaleType="fitXY"
+            android:id="@+id/image"
+            android:layout_marginVertical="17dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedWidth="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="34dp"
+            android:textColor="@color/text_grey_heavy"
+            android:textSize="15dp"
+            android:id="@+id/videoname"
+            android:background="@null"
+            android:text=""
+            app:layout_constraintTop_toTopOf="@id/image"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/image"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintRight_toRightOf="@id/videoname"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tags">
+    </androidx.recyclerview.widget.RecyclerView>-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout3"
+        app:layout_constraintTop_toBottomOf="@id/layout2">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="13dp"
+            android:src="@drawable/suo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="21dp"
+            android:id="@+id/label"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公开可见"
+            app:layout_constraintTop_toTopOf="@id/label"
+            android:textSize="13dp"
+            android:layout_marginLeft="13dp"
+            android:textColor="#333333"
+            app:layout_constraintBottom_toBottomOf="@id/label"
+            app:layout_constraintLeft_toRightOf="@id/label"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:id="@+id/switch_btn"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/label"
+            app:layout_constraintBottom_toBottomOf="@id/label"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:background="@drawable/bg_edit_video_cancel"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="66dp"
+            android:layout_marginLeft="17dp"
+            android:id="@+id/cancel"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:background="@drawable/bg_edit_video_confirm"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:id="@+id/confirm"
+            android:paddingVertical="13dp"
+            android:paddingHorizontal="66dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

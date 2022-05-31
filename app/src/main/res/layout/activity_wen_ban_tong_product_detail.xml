@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="#F2F1F0"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="375dp"
+                        app:banner_auto_loop="false"
+                        app:banner_orientation="horizontal"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:visibility="visible" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥"
+                            android:layout_marginBottom="2dp"
+                            android:textColor="#ffe55c40"
+                            android:textSize="12dp"
+                            android:id="@+id/label3"
+                            android:layout_marginLeft="16dp"
+                            android:includeFontPadding="false"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/pricetag"
+                            />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:includeFontPadding="false"
+                            android:text=""
+                            android:textColor="#ffe55c40"
+                            android:textSize="24dp"
+                            android:layout_marginBottom="-5dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/label3"
+                            app:layout_constraintLeft_toRightOf="@id/label3" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0文版通"
+                            android:includeFontPadding="false"
+                            android:id="@+id/pricetag"
+                            app:layout_constraintTop_toBottomOf="@id/label3"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:textColor="#B8A480"
+                            android:textSize="10dp"
+                            android:background="#FEFAF0"
+                            android:paddingHorizontal="5dp"
+                            android:paddingVertical="2dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="16dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="市场价 ￥"
+                            android:includeFontPadding="false"
+                            android:id="@+id/label2"
+                            app:layout_constraintTop_toTopOf="@id/pricetag"
+                            app:layout_constraintBottom_toBottomOf="@id/pricetag"
+                            app:layout_constraintLeft_toRightOf="@id/pricetag"
+                            android:textColor="#ff999999"
+                            android:textSize="10dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="16dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="六折"
+                            app:layout_constraintTop_toTopOf="@id/price"
+                            app:layout_constraintBottom_toBottomOf="@id/price"
+                            app:layout_constraintLeft_toRightOf="@id/price"
+                            android:layout_marginLeft="7dp"
+                            android:paddingVertical="1dp"
+                            android:id="@+id/discount"
+                            android:visibility="gone"
+                            android:background="@drawable/bg_wenbantong_discount"
+                            android:paddingHorizontal="6dp"
+                            android:textColor="#ffe55c40"
+                            android:textSize="10dp"/>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1198"
+                            android:id="@+id/layout_ev"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginLeft="3.5dp"
+                            android:includeFontPadding="false"
+                            app:layout_constraintTop_toTopOf="@id/label2"
+                            app:layout_constraintBottom_toBottomOf="@id/label2"
+                            app:layout_constraintLeft_toRightOf="@id/label2"
+                            android:textColor="#ff312e2a"
+                            android:textSize="18dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="i?????"
+                                android:fontFamily="sans-serif-medium"
+                                android:id="@+id/evprice"
+                                android:layout_marginLeft="3.5dp"
+                                android:includeFontPadding="false"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                android:textColor="#ff999999"
+                                android:textSize="11dp"
+                                />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                app:layout_constrainedWidth="true"
+                                android:background="#ff999999"
+                                app:layout_constraintLeft_toLeftOf="@id/evprice"
+                                app:layout_constraintRight_toRightOf="@id/evprice"
+                                app:layout_constraintTop_toTopOf="@id/evprice"
+                                app:layout_constraintBottom_toBottomOf="@id/evprice"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="库存：99"
+                            android:id="@+id/stock"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/layout_ev"
+                            app:layout_constraintBottom_toBottomOf="@id/layout_ev"
+                            android:layout_marginRight="25dp"
+                            android:textColor="#ff999999"
+                            android:textSize="11dp"
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:layout_marginTop="15dp"
+                        android:maxLines="2"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textColor="#ff1b1a1a"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintLeft_toLeftOf="@id/fansprice"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/fansprice" />
+
+                    <TextView
+                        android:id="@+id/productdesc"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="17dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:textColor="#ff999999"
+                        android:textSize="12dp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/layout1"
+                    android:layout_marginHorizontal="17dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        app:shapeAppearance="@style/allcorners_7"
+                        app:layout_constrainedHeight="true"
+                        android:layout_height="0dp"
+                        app:layout_constrainedWidth="true"
+                        android:scaleType="fitXY"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:src="@mipmap/image_new_wenbantong_backbg"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:id="@+id/productname"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginHorizontal="29dp"
+                        android:text=""
+                        android:textColor="#ff333333"
+                        android:textSize="15dp"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/productname"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="限时六折"
+                            android:paddingVertical="3dp"
+                            android:id="@+id/label_discount"
+                            android:layout_marginTop="13dp"
+                            android:visibility="visible"
+                            android:paddingHorizontal="6dp"
+                            android:gravity="center"
+                            android:layout_marginBottom="10dp"
+                            android:includeFontPadding="false"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:background="@drawable/bg_new_wenbantong_discount_label"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:textColor="#ffffffff"
+                            android:textSize="10dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="#ff312e2a"
+                            android:paddingVertical="3dp"
+                            android:id="@+id/labelnew_wenbantong_count"
+                            android:paddingHorizontal="6dp"
+                            android:background="@drawable/bg_new_wenbantong_label_wenbantongcount"
+                            android:layout_marginLeft="5dp"
+                            android:textSize="10dp"
+                            app:layout_constraintLeft_toRightOf="@id/label_discount"
+                            android:includeFontPadding="false"
+                            app:layout_constraintTop_toTopOf="@id/label_discount"
+                            app:layout_constraintBottom_toBottomOf="@id/label_discount"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:id="@+id/label_new_wenbantong_stock"
+                            android:paddingLeft="38dp"
+                            android:includeFontPadding="false"
+                            android:paddingVertical="3dp"
+                            android:paddingRight="7dp"
+                            android:background="@drawable/bg_new_wenbantong_stock"
+                            app:layout_constraintTop_toTopOf="@id/labelnew_wenbantong_count"
+                            app:layout_constraintBottom_toBottomOf="@id/labelnew_wenbantong_count"
+                            app:layout_constraintLeft_toRightOf="@id/labelnew_wenbantong_count"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="#ffffffff"
+                            android:textSize="10dp"
+                            />
+
+                        <TextView
+                            app:layout_constraintLeft_toLeftOf="@id/label_new_wenbantong_stock"
+                            app:layout_constraintTop_toTopOf="@id/label_new_wenbantong_stock"
+                            app:layout_constraintBottom_toBottomOf="@id/label_new_wenbantong_stock"
+                            android:layout_width="33dp"
+                            android:paddingVertical="3dp"
+                            android:includeFontPadding="false"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:text="限量"
+                            android:background="@drawable/bg_new_wenbantong_label_wenbantongcount"
+                            android:textColor="#ff3b3b3b"
+                            android:textSize="10dp"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="17dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@mipmap/bg_shop_detail_wenbantong">
+
+                    <ProgressBar
+                        android:id="@+id/progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="76dp"
+                        android:layout_height="6dp"
+                        android:layout_marginLeft="70dp"
+                        android:max="100"
+                        android:progress="50"
+                        android:layout_marginRight="8dp"
+                        android:progressDrawable="@drawable/background_wenbantong_product_detail_progress"
+                        app:layout_constraintTop_toBottomOf="@id/text_progress"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constrainedWidth="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20%"
+                        android:layout_marginRight="11dp"
+                        android:id="@+id/text_progress"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="@id/progress"
+                        android:textColor="#ff9c7a42"
+                        android:textSize="8dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        app:layout_constrainedWidth="true"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/progress"
+                        android:layout_marginLeft="55dp"
+                        android:textStyle="bold"
+                        android:id="@+id/category"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginRight="26dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text=""
+                        android:textColor="#ff9c7a42"
+                        android:textSize="12dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已售"
+                        android:textStyle="bold"
+                        android:maxLength="2"
+                        android:id="@+id/alreadysale"
+                        android:layout_marginBottom="3dp"
+                        app:layout_constraintTop_toTopOf="@id/text_progress"
+                        app:layout_constraintLeft_toLeftOf="@id/progress"
+                        app:layout_constraintBottom_toBottomOf="@id/text_progress"
+                        android:textColor="#ff9c7a42"
+                        android:textSize="9dp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_radius_white_top"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_express"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="18dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:id="@+id/label_express"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="22dp"
+                            android:maxLines="4"
+                            android:text="物流"
+                            android:textColor="#ff999999"
+                            android:textSize="15dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/feight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="29dp"
+                            android:layout_marginRight="8dp"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            app:layout_constrainedWidth="true"
+                            app:layout_constraintLeft_toRightOf="@id/label_express"
+                            app:layout_constraintRight_toLeftOf="@id/label_icon_express"
+                            app:layout_constraintTop_toTopOf="@id/label_express" />
+
+                        <ImageView
+                            android:id="@+id/label_icon_express"
+                            android:layout_width="6dp"
+                            android:visibility="gone"
+                            android:layout_height="10dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label_express"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label_express" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_radius_white_bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/spec_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="12dp"
+                        tools:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/label23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:text="参数"
+                            android:textColor="#ff999999"
+                            android:textSize="15dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" /><!--android:layout_marginTop="15.5dp"-->
+
+                        <TextView
+                            android:id="@+id/attributes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="28dp"
+                            android:ellipsize="end"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            app:layout_constraintBottom_toBottomOf="@id/label23"
+                            app:layout_constraintLeft_toRightOf="@id/label23"
+                            app:layout_constraintTop_toTopOf="@id/label23" />
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="10dp"
+                            android:layout_marginRight="17dp"
+                            android:src="@mipmap/rightbackicon_amallv3_productdetail"
+                            app:layout_constraintBottom_toBottomOf="@id/label23"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/label23" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layout_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="17dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/label63"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label16"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="7.5dp"
+                            android:background="@drawable/bg_wenbantong_company_detail_view"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="拍品详情"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/label16"
+                            app:layout_constraintLeft_toRightOf="@id/label16"
+                            app:layout_constraintTop_toTopOf="@id/label16" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="7.5dp"
+                        android:layout_marginRight="17.5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="#ffcccccc" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/image_detail_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"
+                        android:layout_marginHorizontal="16dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/label17" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="17dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/label10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label9"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="17.5dp"
+                            android:background="@drawable/bg_wenbantong_company_detail_view"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="发行方"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/label9"
+                            app:layout_constraintLeft_toRightOf="@id/label9"
+                            app:layout_constraintTop_toTopOf="@id/label9" />
+
+                        <TextView
+                            android:id="@+id/name_shop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.5dp"
+                            android:text=""
+                            android:textColor="#A98F60"
+                            android:textSize="15dp"
+                            android:layout_marginRight="17dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="17.5dp"
+                        android:layout_marginTop="7.5dp"
+                        android:visibility="gone"
+                        android:layout_marginRight="17.5dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="#ffcccccc" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layout_manufacture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/image_shop"
+                            android:layout_width="39dp"
+                            android:layout_height="39dp"
+                            app:shapeAppearance="@style/allcorners_4"
+                            android:scaleType="centerCrop"
+                            android:layout_marginLeft="17.5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                        <!--android:id="@+id/name_shop"-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.5dp"
+                            android:text=""
+                            android:textColor="#ff333333"
+                            android:textSize="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@id/image_shop"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="17dp"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label11"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="17.5dp"
+                            android:background="@drawable/bg_wenbantong_company_detail_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="购买须知"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/label11"
+                            app:layout_constraintLeft_toRightOf="@id/label11"
+                            app:layout_constraintTop_toTopOf="@id/label11" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            app:layout_constraintTop_toBottomOf="@id/label11"
+                            app:layout_constraintLeft_toLeftOf="@id/label11"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constrainedWidth="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/image1"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/background_radius_white"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="17dp"
+                    android:visibility="visible">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/label12"
+                            android:layout_width="3dp"
+                            android:layout_height="14dp"
+                            android:layout_marginLeft="17.5dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginBottom="17.5dp"
+                            android:background="@drawable/bg_wenbantong_company_detail_view"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="9dp"
+                            android:text="价格须知"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@id/label12"
+                            app:layout_constraintLeft_toRightOf="@id/label12"
+                            app:layout_constraintTop_toTopOf="@id/label12" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            app:layout_constraintTop_toBottomOf="@id/label12"
+                            app:layout_constraintLeft_toLeftOf="@id/label12"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constrainedWidth="true"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="23dp"
+                            android:layout_marginBottom="20dp"
+                            android:id="@+id/image2"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="39dp"
+            android:background="@drawable/circle_wenbantong_product_detail"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar_back"
+            android:src="@mipmap/icon_back"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="29dp"
+            android:layout_marginRight="17.5dp"
+            android:layout_marginTop="39dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/circle_wenbantong_product_detail"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/toolbar_share"
+            android:src="@mipmap/nav_icon_send"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/layout_discount"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@mipmap/background_wenbantong_discount">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="限时6折"
+            android:textColor="#ffffffff"
+            android:layout_marginLeft="50dp"
+            android:textSize="15dp"
+            android:id="@+id/text_discount_tag"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="剩余时间："
+            android:textColor="#ffffffff"
+            android:layout_marginRight="36dp"
+            android:id="@+id/text_discount_remaintime"
+            android:textSize="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="12dp"
+                    android:src="@mipmap/icon_kefu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="11dp"
+                    android:text="客服"
+                    android:textColor="#ff333333"
+                    android:textSize="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="11dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:id="@+id/label_wenbantong_new_price"
+                android:layout_marginLeft="18dp"
+                android:text=""
+                tools:text=""
+                android:textColor="#ff312e2a"
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥ - -"
+                android:textColor="#ff9d9b98"
+                android:layout_marginTop="1dp"
+                android:textSize="12dp"
+                android:id="@+id/originalprice"
+                android:layout_marginLeft="3dp"
+                android:includeFontPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintLeft_toLeftOf="@id/label_wenbantong_new_price"
+                app:layout_constraintTop_toBottomOf="@id/label_wenbantong_new_price"
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toTopOf="@id/originalprice"
+                app:layout_constraintBottom_toBottomOf="@id/originalprice"
+                app:layout_constraintLeft_toLeftOf="@id/originalprice"
+                app:layout_constraintRight_toRightOf="@id/originalprice"
+                app:layout_constrainedWidth="true"
+                android:background="#ff9d9b98"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_nopintuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="17dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginVertical="8dp"
+                android:background="@drawable/background_wenbantong_gobuynow"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="立即购买"
+                    android:textColor="#ffffffff"
+                    android:maxWidth="160dp"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:paddingHorizontal="23dp"
+                    android:paddingVertical="11dp"
+                    android:id="@+id/buynow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--</androidx.appcompat.widget.LinearLayoutCompat>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginRight="17dp"
+                android:visibility="gone"
+                android:layout_marginVertical="8dp"
+                tools:visibility="visible"
+                android:id="@+id/layout_dengdai_kaishou"
+                android:background="@drawable/background_wenbantong_dengdaixiaosho"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="敬请期待"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/label_dengdaiba"
+                    android:layout_marginHorizontal="22dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textColor="#ffffffff"
+                    android:textSize="15dp"
+                    />
+
+                <TextView
+                    app:layout_constraintTop_toBottomOf="@id/label_dengdaiba"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03.10 14:00 开售"
+                    android:includeFontPadding="false"
+                    android:visibility="visible"
+                    android:layout_marginBottom="4dp"
+                    android:textColor="#ffffffff"
+                    android:id="@+id/kaishoutime"
+                    android:textSize="11dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginTop="2dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    
+    <ImageView
+        android:layout_width="61dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/image_wenbantong_zixunkefu"
+        android:adjustViewBounds="true"
+        android:id="@+id/zixunkefu"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_bottom"/>
+
+
+
+    <!--<LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:background="@mipmap/background_wenbantong_discount">
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="限时6折"
+                android:textColor="#ffffffff"
+                android:layout_marginLeft="50dp"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余时间："
+                android:textColor="#ffffffff"
+                android:layout_marginRight="36dp"
+                android:textSize="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@mipmap/icon_kefu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="11dp"
+                        android:text="客服"
+                        android:textColor="#ff333333"
+                        android:textSize="10dp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/background_wenbantong_gobuynow"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即购买"
+                    android:textColor="#ffffffff"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginVertical="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

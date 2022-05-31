@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:fitsSystemWindows="true"
+    android:id="@+id/root"
+    android:visibility="gone"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:visibility="visible"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <include
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/order_info"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:id="@+id/layout_return_goods"
+            android:background="@drawable/background_radius_white_top">
+
+            <TextView
+                android:id="@+id/tv_return_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="18dp"
+                android:text="仅退款"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_return_goods"
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="23dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_return_goods"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_return_goods"
+                app:srcCompat="@mipmap/icon_back_right" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/layout_return_goods_money">
+
+            <TextView
+                android:id="@+id/tv_return_goods_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="18dp"
+                android:text="退货退款"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img_return_goods_money"
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="23dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_return_goods_money"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_return_goods_money"
+                app:srcCompat="@mipmap/icon_back_right" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_exchange"
+            android:background="@drawable/background_radius_white_bottom">
+
+            <TextView
+                android:id="@+id/tv_exchange_goods"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="18dp"
+                android:text="换货"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:layout_marginEnd="23dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_goods"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_exchange_goods"
+                app:srcCompat="@mipmap/icon_back_right" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</LinearLayout>

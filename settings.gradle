@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url 'https://developer.huawei.com/repo/'}
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url 'https://developer.huawei.com/repo/'}
+    }
+}
+rootProject.name = "WenPaiTong"
+include ':app',':zxinglibrary'
+include ':MyApp'
+include ':citypickerview'

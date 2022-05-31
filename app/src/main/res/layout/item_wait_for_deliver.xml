@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_order_layout"
+    android:orientation="vertical"
+    android:background="@drawable/background_radius_white"
+    android:layout_marginTop="17dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 等待发货 -->
+
+    <!--<ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待支付中"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/store_name"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:id="@+id/userimage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/store_name"
+        android:background="@color/black"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/label3"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/image_product"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userimage"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/userimage"
+        app:layout_constraintBottom_toTopOf="@id/label3"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@id/image_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/product_name"
+        android:text="商品名称"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="x1"
+        android:id="@+id/product_count"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/product_price"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userimage"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x599"
+        android:id="@+id/product_price"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/image_product"
+        app:layout_constraintTop_toBottomOf="@id/product_count"/>-->
+
+    <include layout="@layout/item_order_top"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看详情"
+            android:id="@+id/seedetail"
+            android:layout_marginRight="15dp"
+            android:paddingVertical="5dp"
+            android:textSize="12dp"
+            android:textColor="#ff1e1e1e"
+            android:paddingHorizontal="18dp"
+            android:background="@drawable/bg_button_grey_line"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/item_order_bottom"/>
+
+    <!--<ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/label2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/seedetail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获得工分"
+        android:id="@+id/get_work_point"
+        app:layout_constraintLeft_toRightOf="@id/label2"
+        app:layout_constraintTop_toBottomOf="@id/seedetail"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="啊"
+        app:layout_constraintLeft_toRightOf="@id/get_work_point"
+        app:layout_constraintTop_toBottomOf="@id/seedetail"/>-->
+
+</androidx.appcompat.widget.LinearLayoutCompat>

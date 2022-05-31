@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="0dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/bg_white_r7"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="160dp"
+            android:layout_height="170dp"
+            app:shapeAppearance="@style/topcorners_7dp"
+            android:id="@+id/image"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            android:layout_marginBottom="13dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="12dp"
+            android:id="@+id/videoname"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_gravity="start"
+            android:textSize="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/price"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

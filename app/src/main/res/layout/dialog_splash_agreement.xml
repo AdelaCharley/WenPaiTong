@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_r6"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="23dp"
+    android:paddingVertical="5dp"
+    tools:context=".equnshang.view.SplashAgreementDialog">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="服务协议和隐私政策"
+        android:textColor="#343434"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/agreement_p1"
+        android:textColor="#9c9c9c"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/agreement_p2"
+        android:textColor="#9c9c9c"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="7dp">
+
+        <TextView
+            android:id="@+id/tv_disagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="暂不同意"
+            android:textColor="#343434"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="同意并接受"
+            android:textColor="@color/blue"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

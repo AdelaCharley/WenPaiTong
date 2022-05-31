@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="18dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/background_radius_white">
+
+    <TextView
+        android:id="@+id/price_symbel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="33dp"
+        android:text="￥"
+        android:textColor="#ffe25451"
+        android:textSize="15dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-5dp"
+        android:text="5"
+        android:textColor="#ffe25451"
+        android:textSize="27dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/price_symbel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/price_symbel" />
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="优惠券"
+        android:textColor="#ff333333"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintLeft_toLeftOf="@id/price"
+        app:layout_constraintStart_toStartOf="@+id/price_symbel"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+   <TextView
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="群商网店"
+        android:textColor="#ff333333"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@+id/gouse"
+        app:layout_constraintLeft_toRightOf="@id/price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="使用规则"
+        android:textColor="#ff333333"
+        android:textSize="12dp"
+        app:layout_constraintLeft_toLeftOf="@id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="18dp"
+        android:text="0000-00-00"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/product_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rule" />
+
+    <TextView
+        android:id="@+id/aluse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="已使用"
+        android:textSize="11dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gouse"
+        app:layout_constraintStart_toStartOf="@+id/gouse"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gouse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_amallv3_discount_gouse"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="7dp"
+        android:text="去使用"
+        android:textColor="#ffffffff"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

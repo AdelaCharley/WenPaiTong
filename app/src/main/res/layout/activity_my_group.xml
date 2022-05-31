@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#F7F7F7"
+    tools:context=".equnshang.activity.MyGroupActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/top"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/layout_toolbar"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextAppearance="@style/amallv3_textsize"
+            android:background="@color/white"
+            android:id="@+id/tablayout"
+            style="@style/amallv3_mygroup_tab"
+            app:tabMode="auto"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constrainedHeight="true"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

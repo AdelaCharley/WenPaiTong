@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="17dp"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/background_radius_white">
+
+    <TextView
+        android:id="@+id/tittestr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="视频"
+        android:textSize="12dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_grey_heavy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#ffcccccc"
+        android:layout_marginTop="10dp"
+        android:id="@+id/label1"
+        app:layout_constraintTop_toBottomOf="@id/tittestr"
+        android:layout_marginHorizontal="15dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/label1">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15dp"
+                android:id="@+id/count_star"
+                android:textColor="@color/blue"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#ff6f6f6f"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="收藏"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/count_up"
+                android:textSize="15dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#ff6f6f6f"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="点赞"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="15dp"
+                android:id="@+id/count_comment"
+                android:textColor="@color/blue"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#ff6f6f6f"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="评论"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/count_share"
+                android:textSize="15dp"
+                android:textColor="@color/blue"
+                android:layout_marginTop="15dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="10dp"
+                android:textColor="#ff6f6f6f"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="分享"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

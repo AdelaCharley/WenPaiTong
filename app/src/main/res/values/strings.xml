@@ -1,0 +1,162 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">WenPaiTong</string>
+    <array name="album_order">
+
+        <item>默认排序</item>
+
+        <item>时间升序</item>
+
+        <item>时间倒序</item>
+
+    </array>
+
+    <!-- 点赞选中 -->
+    <string name="icon_like_fill">&#xe60d;</string>
+    <!--评论-->
+    <string name="icon_comment">&#xe621;</string>
+    <!-- 微博 -->
+    <string name="icon_weibo">&#xe620;</string>
+    <!-- 微信 -->
+    <string name="icon_wechat">&#xe61d;</string>
+    <!-- 微信朋友圈 -->
+    <string name="icon_friends">&#xe61c;</string>
+    <!-- QQ -->
+    <string name="icon_qq">&#xe61e;</string>
+    <!-- QQ空间 -->
+    <string name="icon_qq_space">&#xe61f;</string>
+    <!-- 更多 -->
+    <string name="icon_more">&#xe61b;</string>
+    <!-- 地理位置 -->
+    <string name="icon_location_fill">&#xe624;</string>
+
+    <string name="trans">trans</string>
+
+    <string name="view_pager_bottom_sheet_behavior" translatable="false" tools:ignore="ExtraTranslation">
+        com.goobird.common.application.widget.bottomsheetdialog.viewpagerofbottomsheet.ViewPagerBottomSheetBehavior</string>
+
+    <!--    页面标题-->
+    <string name="title_enter_message">填写基本信息</string>
+    <string name="title_enter_phone">填写推荐人手机号码</string>
+    <string name="title_splash">© 2020-2021 Qunshangshijie</string>
+    <string name="title_inform">消息</string>
+    <string name="title_personal_homepage">我的主页</string>
+    <string name="title_personal_order">我的订单</string>
+    <string name="title_address">地址管理</string>
+    <string name="title_share_qrcode">邀请码分享</string>
+
+    <!--    页面显示文本-->
+    <string name="text_main_invest_code">邀请码</string>
+    <string name="text_login_say_hello">欢迎使用 群票</string>
+    <string name="text_login_get_code">获取验证码</string>
+    <string name="text_login_enter_code">请输入验证码</string>
+    <string name="text_login_enter_phone">请输入手机号</string>
+    <string name="text_login_protocol">我已阅读并同意《用户协议》和《隐私协议》</string>
+    <string name="text_login_user_protocol">我已阅读并同意《群商视界用户协议》和《群商视界隐私协议》</string>
+    <string name="text_login_privacy_protocol">我已阅读并同意《群商视界用户协议》和《群商视界隐私协议》</string>
+    <string name="text_enter_message_head">上传个人头像</string>
+    <string name="text_enter_message_name">昵称：</string>
+    <string name="text_enter_message_sex">性别：</string>
+    <string name="text_enter_message_birthday">生日：</string>
+    <string name="text_enter_message_hobby">兴趣标签：</string>
+    <string name="text_enter_phone_user_name">用户名用户名</string>
+    <string name="text_order_all">全部订单</string>
+    <string name="text_order_pay">待支付</string>
+    <string name="text_order_delivery">待发货</string>
+    <string name="text_order_receive">待收货</string>
+    <string name="text_order_finish">已完成</string>
+    <string name="text_personal_introduce">个人签名</string>
+    <string name="text_personal_edit">编辑个人信息</string>
+    <string name="text_order_state">交易成功</string>
+
+
+    <!--    页面显示提示内容-->
+    <string name="hint_login_get_vCode">%1$d秒后可再次获取</string>
+    <string name="hint_enter_referee_maybe">(没有推荐人可不填)</string>
+    <string name="hint_enter_message_name">必填（最多9个字）</string>
+    <string name="hint_enter_message_birthday">必填</string>
+    <string name="hint_enter_message_maybe">(选填)</string>
+    <string name="hint_enter_message_most_choices">最多选择3个</string>
+    <string name="hint_main_enter_comment">留下你的精彩评论吧</string>
+
+    <!--    按钮名称-->
+    <string name="btn_next">下一步</string>
+    <string name="btn_finish">完 成</string>
+    <string name="btn_sure">确 定</string>
+    <string name="btn_send">发送</string>
+    <string name="btn_share">立即分享</string>
+    <string name="rb_sex_male">男</string>
+    <string name="rb_sex_female">女</string>
+    <string name="btn_login_login">登 录</string>
+    <string name="btn_login_register">没有账号?点此去注册</string>
+    <string name="btn_order_sell">卖了换钱</string>
+    <string name="btn_order_logistics">查看物流</string>
+    <string name="btn_order_comment">评价</string>
+
+    <!--    一些不重要的文字，只是为了让布局看起来更方便-->
+    <string name="text_nonsense_name">这儿放名字</string>
+    <string name="text_nonsense_comment">这是一条超级精彩的评论</string>
+    <string name="text_nonsense_time">YY-MM-DD hh-mm-ss</string>
+    <string name="text_nonsense_time_1">发布于：YY-MM-DD hh:mm</string>
+    <string name="text_nonsense_number">2.1w</string>
+    <string name="text_nonsense_title">这是标题</string>
+    <string name="text_nonsense_words">这有字</string>
+    <string name="text_nonsense_sentence">这里应该是有一句话的。。。</string>
+    <string name="text_nonsense_paragraph">以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。
+        以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。以下是一堆字,都是字，全是字。</string>
+    <string name="companyphone">4000002552</string>
+    <string name="text_nonsense_identity">会员</string>
+    <string name="text_nonsense_money">￥</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_more">更多</string>
+    <string name="text_nonsense_phone">151****0000</string>
+    <string name="text_address_add">新建收货地址</string>
+    <string name="title_personal_info">个人资料</string>
+    <string name="text_personal_info_sex">性别</string>
+    <string name="text_personal_info_identity">身份</string>
+    <string name="text_personal_info_real">实名认证</string>
+    <string name="number_and_letters">1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="agreement_p1" translatable="false">\u3000\u3000请您务必审慎阅读、充分理解“服务协议”和“隐私政策”各条款，包括但不限于：为了更好的向您提供服务，我们需要收集您的设备标识、操作日志等信息用于分析、优化应用性能。</string>
+    <string name="agreement_p2" translatable="false">\u3000\u3000您可阅读《服务协议》和《隐私政策》了解详细信息。如果您同意，请点击下面按钮开始接受我们的服务。</string>
+</resources>

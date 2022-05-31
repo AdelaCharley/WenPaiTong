@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff7f7f7"
+    tools:context=".equnshang.activity.MyPhysicalStoresActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:id="@+id/bg"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/bg_physical_stores"/>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="27dp"
+        android:layout_marginLeft="17.5dp"
+        android:layout_marginTop="39dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_back"
+        android:src="@drawable/arrow_left_white"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="实体店"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/toolbar_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar_back"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_back"
+        android:id="@+id/toolbar_title"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/def_physical_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/physical_icon"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ffffffff"
+        android:textSize="17dp"
+        android:maxLength="14"
+        android:id="@+id/store_name"
+        android:ellipsize="end"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintTop_toTopOf="@id/physical_icon"
+        app:layout_constraintBottom_toBottomOf="@id/physical_icon"
+        app:layout_constraintLeft_toRightOf="@id/physical_icon"/>
+
+    <ImageView
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@mipmap/physical_store_share"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/physical_share"
+        android:layout_marginRight="17dp"
+        app:layout_constraintBottom_toTopOf="@id/text_share"
+        app:layout_constraintTop_toTopOf="@id/physical_icon"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分享"
+        android:id="@+id/text_share"
+        android:textColor="#ffffffff"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@id/physical_share"
+        app:layout_constraintLeft_toLeftOf="@id/physical_share"
+        app:layout_constraintRight_toRightOf="@id/physical_share"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="17dp"
+        android:layout_marginTop="-60dp"
+        android:id="@+id/layout_data"
+        android:background="@drawable/background_radius_white"
+        app:layout_constraintTop_toBottomOf="@+id/bg">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/physical_layout1">
+
+                <TextView
+                    android:id="@+id/todayusercount"
+                    style="@style/physical_text1"
+                    android:text="- -" />
+
+                <TextView
+                    style="@style/physical_text2"
+                    android:text="今日到访用户" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/physical_layout1">
+
+                <TextView
+                    android:id="@+id/weekusercount"
+                    style="@style/physical_text1"
+                    android:text="- -" />
+
+                <TextView
+                    style="@style/physical_text2"
+                    android:text="一周到访用户"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/physical_layout1">
+
+                <TextView
+                    android:id="@+id/totalusercount"
+                    style="@style/physical_text1"
+                    android:text="- -" />
+
+                <TextView
+                    style="@style/physical_text2"
+                    android:text="累计到访用户"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_light"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/physical_layout2">
+
+                <ImageView
+                    android:src="@mipmap/physical_img1"
+                    style="@style/physical_img1"/>
+                
+                <TextView
+                    android:text="图片数量"
+                    style="@style/physical_text3"/>
+
+                <TextView
+                    android:id="@+id/imagecount"
+                    style="@style/physical_text4"
+                    android:text="- -" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                style="@style/physical_layout2">
+
+                <ImageView
+                    android:src="@mipmap/physical_video_count"
+                    style="@style/physical_img1"/>
+
+                <TextView
+                    android:text="视频数量"
+                    style="@style/physical_text3"/>
+
+                <TextView
+                    android:id="@+id/videocount"
+                    style="@style/physical_text4"
+                    android:text="- -" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginHorizontal="17dp"
+        android:background="@drawable/background_radius_white"
+        app:layout_constraintTop_toBottomOf="@id/layout_data"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_store_manage"
+            style="@style/physical_layout1">
+
+            <ImageView
+                style="@style/physical_img2"
+                android:src="@mipmap/manange_store" />
+
+            <TextView
+                style="@style/physical_text5"
+                android:text="店铺管理" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_manage_image"
+            style="@style/physical_layout1">
+
+            <ImageView
+                style="@style/physical_img2"
+                android:src="@mipmap/manange_images" />
+
+            <TextView
+                style="@style/physical_text5"
+                android:text="图册管理" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_manage_video"
+            style="@style/physical_layout1">
+
+            <ImageView
+                style="@style/physical_img2"
+                android:src="@mipmap/store_manange_videos" />
+
+            <TextView
+                style="@style/physical_text5"
+                android:text="视频管理" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

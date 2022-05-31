@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context=".equnshang.activity.ApplyLogOutFailedActivity">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <ImageView
+        android:layout_width="73dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="53dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/image_logout_fail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注销申请失败"
+        android:includeFontPadding="false"
+        android:textColor="#ff333333"
+        android:textSize="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#ff999999"
+        android:textSize="14dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/reason"
+        android:layout_marginHorizontal="57dp"
+        />
+
+    <TextView
+        android:layout_width="90dp"
+        android:id="@+id/iknow"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:includeFontPadding="false"
+        android:layout_marginTop="41dp"
+        android:layout_height="35dp"
+        android:background="@drawable/bg_apply_logout_now"
+        android:text="知道了"
+        android:textColor="#ffffffff"
+        android:textSize="14dp"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

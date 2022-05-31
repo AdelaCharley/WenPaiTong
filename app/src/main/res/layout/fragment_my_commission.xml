@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".equnshang.fragment.MyCommissionFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        tools:visibility="gone"
+        tools:listitem="@layout/item_my_commission_head" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:id="@+id/nopermission_layout"
+        tools:visibility="gone"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/bg_no_permisson_top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的权限不足"
+                android:textColor="#ffe5524b"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp"
+                android:textSize="24dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="升级为店主/主任/总裁解锁佣金服务权限"
+                android:textColor="#ff333333"
+                android:textSize="12dp"
+                android:id="@+id/label"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="17dp"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:paddingBottom="18dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_no_permisson_bottom">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/layout"
+                app:layout_constraintRight_toLeftOf="@id/image"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关于认购市场身份"
+                    android:textColor="#ff333333"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="网   点：单笔认购1万以上版通"
+                    android:textColor="#ff666666"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="21dp"
+                    android:textSize="14dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="主任：单笔认购20万以上版通"
+                    android:textColor="#ff666666"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="14dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="总裁：单笔认购100万以上版通"
+                    android:textColor="#ff666666"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:layout_width="91dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="71dp"
+                android:id="@+id/image"
+                android:src="@mipmap/image_nopermisson"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/layout_weiong"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="145dp"
+            android:src="@mipmap/image_yongjiinweikong"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无收益"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold"
+            android:textColor="#ff999999"
+            android:textSize="15dp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

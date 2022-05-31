@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="99dp"
+        app:shapeAppearance="@style/allcorners_7"
+        android:layout_height="99dp"
+        android:scaleType="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="17dp"
+        android:id="@+id/image"/>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        android:layout_marginLeft="13dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/vendortitle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constrainedWidth="true"
+        android:layout_marginRight="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="店铺名店铺名店铺名"
+        android:textColor="#ff121212"
+        android:textSize="19dp"
+        />
+    <TextView
+        android:id="@+id/subtitle"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="18dp"
+        app:layout_constraintLeft_toLeftOf="@id/vendortitle"
+        app:layout_constraintTop_toBottomOf="@id/vendortitle"
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:text="简单介绍简单介绍简单介绍简单介绍简 简单介绍单介绍..."
+        android:textColor="#ff121212"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#fffe8f53"
+        android:textSize="12dp"
+        android:id="@+id/tag"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/subtitle"
+        app:layout_constraintTop_toBottomOf="@id/subtitle"
+        android:background="@drawable/bg_item_store_list_tag"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="147m"
+        android:id="@+id/distance"
+        android:textColor="#ff333333"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="@id/tag"
+        app:layout_constraintBottom_toBottomOf="@id/tag"
+        app:layout_constraintRight_toRightOf="@id/vendortitle"/>
+
+    <View
+        app:layout_constraintLeft_toLeftOf="@id/vendortitle"
+        android:layout_width="match_parent"
+        app:layout_constrainedWidth="true"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="19dp"
+        app:layout_constraintTop_toBottomOf="@id/tag"
+        android:background="@color/grey"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开奖时间：12:00:00"
+        android:visibility="invisible"
+        android:id="@+id/prizetime"
+        android:textSize="23dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/waittime"
+        android:textSize="23dp"
+        android:textColor="#ff5d7bfa"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text=""/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="后自动开奖"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:id="@+id/label"
+        app:layout_constraintLeft_toRightOf="@id/prize_image"
+        app:layout_constraintTop_toTopOf="@id/waittime"
+        app:layout_constraintBottom_toBottomOf="@id/waittime"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0人参加"
+        android:id="@+id/parcount"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/purple"
+        android:textSize="12dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/waittime"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/prize_image"
+        app:layout_constraintTop_toBottomOf="@id/prizetime"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="22dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constrainedWidth="true"
+        android:id="@+id/prize_name"
+        android:maxLines="2"
+        android:textSize="14dp"
+        android:textColor="@color/text_grey_heavy"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="@id/prize_image"
+        app:layout_constraintTop_toTopOf="@id/prize_image"/>
+
+    <TextView
+        android:id="@+id/joinorgrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        android:text="立 即 参 与 抽 奖"
+        android:background="@drawable/bg_autointent"
+        app:layout_constraintBottom_toBottomOf="@id/prize_image"
+        app:layout_constraintLeft_toLeftOf="@id/prize_name"
+        app:layout_constraintRight_toRightOf="@id/prize_name"
+        app:layout_constrainedWidth="true"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/prize_name"
+        android:textColor="#fffd394d"
+        android:textSize="18dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/prize_image"
+        android:text="未中奖，就差一点点"
+        android:id="@+id/prizeresult"/> <!-- 未中奖 -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="奖品价值"
+        android:id="@+id/prize_value"
+        android:textSize="13dp"
+        android:textColor="#ffc14bf9"
+        app:layout_constraintTop_toBottomOf="@id/layout_tags"
+        app:layout_constraintLeft_toLeftOf="@id/prize_name"
+        app:layout_constraintBottom_toTopOf="@id/joinorgrey"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/layout_tags"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/prize_value"
+        app:layout_constraintTop_toBottomOf="@id/prize_name"
+        app:layout_constraintLeft_toRightOf="@id/prize_image"
+        app:layout_constrainedWidth="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="12dp"
+            android:textColor="@color/text_grey"
+            android:id="@+id/tags_one"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/prize_value"
+            app:layout_constraintTop_toBottomOf="@id/prize_name"
+            app:layout_constraintLeft_toRightOf="@id/prize_image"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/tags_two"
+            android:textSize="12dp"
+            android:textColor="@color/text_grey"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/prize_value"
+            app:layout_constraintTop_toBottomOf="@id/prize_name"
+            app:layout_constraintLeft_toRightOf="@id/tags_one"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center"
+            android:id="@+id/tags_three"
+            android:textSize="12dp"
+            android:textColor="@color/text_grey"
+            app:layout_constraintBottom_toTopOf="@id/prize_value"
+            app:layout_constraintTop_toBottomOf="@id/prize_name"
+            app:layout_constraintLeft_toRightOf="@id/tags_two"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prize_image"
+        android:id="@+id/tickets"/>
+
+    <!--<TextView
+        android:id="@+id/ticketno"
+        android:text="I445452fdrfe152"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_top"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/grey_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="排序方式"
+            android:layout_marginVertical="9dp"
+            android:includeFontPadding="false"
+            android:layout_marginLeft="17dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="#ff333333"
+            android:textSize="16dp"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/grey_light"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▼"
+            android:textSize="8dp"
+            android:id="@+id/label_down"
+            android:layout_marginRight="22dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注时间从新到旧"
+            android:id="@+id/doneworder"
+            android:textColor="#ff333333"
+            android:layout_marginRight="8dp"
+            android:paddingVertical="5dp"
+            android:includeFontPadding="false"
+            app:layout_constraintTop_toTopOf="@id/label_down"
+            app:layout_constraintBottom_toBottomOf="@id/label_down"
+            app:layout_constraintRight_toLeftOf="@id/label_down"
+            android:textSize="12dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:id="@+id/list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:id="@+id/empty_layout">
+
+        <ImageView
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/image_status"
+            android:src="@mipmap/layout_empty_new_concern"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#A2ABB9"
+            android:textStyle="bold"
+            android:id="@+id/text_status"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/image_status"
+            android:text="暂无关注"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_marginLeft="18dp"
+        android:id="@+id/head"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/background_circle_grey"/>
+    <View
+        app:layout_constraintTop_toBottomOf="@id/head"
+        app:layout_constraintLeft_toLeftOf="@id/head"
+        app:layout_constraintRight_toRightOf="@id/head"
+        app:layout_constraintBottom_toBottomOf="@id/time"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        android:background="@color/grey"/>
+
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/head"
+        app:layout_constraintLeft_toRightOf="@id/head"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constrainedWidth="true"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="信息"
+        android:textSize="14dp"
+        android:id="@+id/info"/>
+    <TextView
+        app:layout_constraintLeft_toLeftOf="@id/info"
+        app:layout_constraintTop_toBottomOf="@id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:text="2021"
+        android:layout_marginTop="10dp"
+        android:textSize="11dp"
+        android:id="@+id/time"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

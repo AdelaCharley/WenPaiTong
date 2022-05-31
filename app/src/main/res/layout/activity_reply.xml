@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_toolbar"
+        android:id="@+id/top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="12.5dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/user_image"
+                        app:layout_constraintLeft_toRightOf="@id/user_image"
+                        app:layout_constraintTop_toTopOf="@id/user_image" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="17dp"
+                        android:text=""
+                        android:textColor="@color/text_grey_heavy"
+                        android:textSize="17dp"
+                        app:layout_constrainedWidth="true"
+                        app:layout_constraintLeft_toLeftOf="@id/username"
+                        app:layout_constraintTop_toBottomOf="@id/username" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/up"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="18dp"
+                        android:src="@mipmap/black_zan"
+                        app:layout_constraintBottom_toBottomOf="@id/time"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/time" />
+
+                    <TextView
+                        android:id="@+id/upcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="7dp"
+                        android:text="0"
+                        android:textSize="14dp"
+                        app:layout_constraintBottom_toBottomOf="@id/time"
+                        app:layout_constraintRight_toLeftOf="@id/up"
+                        app:layout_constraintTop_toTopOf="@id/time" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="2020-02-11"
+                        android:textColor="#ff999999"
+                        android:textSize="12dp"
+                        app:layout_constraintLeft_toLeftOf="@id/content"
+                        app:layout_constraintTop_toBottomOf="@id/content" />
+
+                    <ImageView
+                        android:id="@+id/close"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_marginRight="17dp"
+                        android:src="@mipmap/ic_close"
+                        android:visibility="invisible"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/username" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部回复"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginVertical="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/replys"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暂无更多评论"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="15dp"
+            android:paddingLeft="10dp"
+            app:layout_constrainedWidth="true"
+            android:hint="说点什么吧"
+            android:id="@+id/commentcontent"
+            android:textSize="12dp"
+            app:layout_constraintRight_toLeftOf="@id/send"
+            android:background="@drawable/bg_send_comment_edittext"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="71.5dp"
+            android:layout_height="30dp"
+            android:text="发送"
+            android:id="@+id/send"
+            android:src="@mipmap/sendbutton"
+            android:layout_marginVertical="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="17dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

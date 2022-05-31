@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="500dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:isScrollContainer="true"
+    android:background="@drawable/background_radius_white_top"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/rl_comment_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/tv_dialog_comment_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:text="@string/text_nonsense_title"
+            android:textColor="#ff111111"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:id="@+id/dialog_comment_close"
+            android:layout_width="40dp"
+            android:padding="13dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:src="@mipmap/ic_close_bold" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/rl_comment"
+        app:layout_constraintTop_toBottomOf="@id/rl_comment_title"
+        app:layout_constrainedHeight="true"
+        android:layout_below="@id/rl_comment_title"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂无评论"
+        android:textSize="14dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/list"
+        app:layout_constraintBottom_toBottomOf="@id/list"
+        app:layout_constraintLeft_toLeftOf="@id/list"
+        app:layout_constraintRight_toRightOf="@id/list"
+        android:id="@+id/nocomments"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_comment"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:focusable="true"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingHorizontal="@dimen/margin_horizontal_comment"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!--<include
+            layout="@layout/divider_view"/>-->
+
+        <EditText
+            android:focusable="false"
+            android:id="@+id/et_comment_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
+            android:autofillHints="@string/hint_main_enter_comment"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_comment_send"
+            android:background="@drawable/et_comment_bg"
+            app:layout_constrainedWidth="true"
+            android:hint="@string/hint_main_enter_comment"
+            android:inputType="none"
+            android:layout_marginRight="6dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:textColor="@color/text_grey"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tv_comment_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="false"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintTop_toTopOf="@id/et_comment_enter"
+            app:layout_constraintBottom_toBottomOf="@id/et_comment_enter"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/btn_send"
+            android:textSize="19dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp"
+            android:textStyle="bold"
+            android:layout_marginRight="5dp"
+            android:textColor="#ff878789"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
