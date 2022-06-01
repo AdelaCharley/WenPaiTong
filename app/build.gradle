@@ -250,4 +250,4 @@ dependencies {
     mavenCentral()
 }*/
 //apply plugin: 'com.google.gms.google-services'
-//id plugin: 'com.huawei.agconnect'
+apply plugin: 'com.huawei.agconnect'

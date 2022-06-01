@@ -1,4 +1,4 @@
-pluginManagement {
+/*pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
@@ -8,6 +8,18 @@ pluginManagement {
         maven { url 'https://developer.huawei.com/repo/'}
         mavenCentral()
     }
+    *//*dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20'
+
+        classpath 'com.didichuxing.doraemonkit:dokitx-plugin:3.3.5'
+
+        classpath 'com.google.gms:google-services:4.3.4'
+        // hms
+        classpath 'com.huawei.agconnect:agcp:1.4.1.300'
+
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+    }*//*
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -19,7 +31,8 @@ dependencyResolutionManagement {
         maven { url "https://s01.oss.sonatype.org/content/groups/public" }
         maven { url 'https://developer.huawei.com/repo/'}
     }
-}
+
+}*/
 rootProject.name = "WenPaiTong"
 include ':app',':zxinglibrary'
 include ':MyApp'
