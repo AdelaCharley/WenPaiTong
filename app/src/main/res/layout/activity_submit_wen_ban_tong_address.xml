@@ -151,7 +151,7 @@
         <ImageView
             android:layout_width="10dp"
             android:layout_height="15dp"
-            android:src="@drawable/rightarrow"
+            android:src="@mipmap/rightarrow"
             android:layout_marginRight="17dp"
             app:layout_constraintTop_toTopOf="@id/label3"
             app:layout_constraintBottom_toBottomOf="@id/label3"

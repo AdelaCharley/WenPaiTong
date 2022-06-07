@@ -80,7 +80,7 @@
                     android:layout_width="15dp"
                     android:layout_height="15dp"
                     android:layout_marginLeft="8dp"
-                    android:src="@drawable/mulu"
+                    android:src="@mipmap/mulu"
                     android:id="@+id/paster"
                     app:layout_constraintLeft_toRightOf="@id/expressid"
                     app:layout_constraintTop_toTopOf="@id/expressid"

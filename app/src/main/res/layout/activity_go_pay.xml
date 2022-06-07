@@ -39,7 +39,7 @@
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/wechatpay"
+            android:src="@mipmap/wechatpay"
             android:id="@+id/label_wechatpay"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -77,7 +77,7 @@
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/alipay"
+            android:src="@mipmap/alipay"
             android:id="@+id/label_alipay"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"

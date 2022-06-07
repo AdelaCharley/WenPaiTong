@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.content.Intent
 
 import android.os.Bundle
@@ -138,4 +139,4 @@ class AfterSaleSendExpressActivity : BaseActivity() {
             })
     }
 
-}
+}*/

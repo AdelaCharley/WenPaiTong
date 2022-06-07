@@ -164,6 +164,6 @@
         android:layout_marginTop="2dp"
         app:layout_constraintTop_toTopOf="@id/product_name"
         android:id="@+id/close"
-        android:src="@drawable/circleclose"/>
+        android:src="@mipmap/circleclose"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,7 +32,7 @@ class ProcureActivity : BaseActivity() {
         toolbar_back.setOnClickListener {
             finish()
         }
-        toolbar_back.setImageDrawable(getDrawable(R.drawable.arrow_left_white))
+        toolbar_back.setImageDrawable(getDrawable(R.mipmap.arrow_left_white))
         toolbar_title.setText("拼采购")
         toolbar_title.setTextColor(resources.getColor(R.color.white))
         top.setBackgroundColor(resources.getColor(R.color.black))

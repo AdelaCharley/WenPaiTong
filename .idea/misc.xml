@@ -3,7 +3,82 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/drawable/text_search.xml" value="0.1845" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_about.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_account_safty.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_account_setting.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_add_address_v2.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_add_image_to_store_album.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_add_video_to_store_videos.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_address.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_address_v2.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_after_sale_detail.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_after_sale_send_express.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_all_experience.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_go_buy.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_go_buy_v2.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_search_result_v3.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v2.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v3.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v3_category.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v3_common_question.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v3_common_question_detail.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_amall_v3_new_year.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_apply_logouting.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_auth.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_bind_inviter.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_black.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_bmall_product_detail.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_bmall_search.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_bmall_search_result.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_bmall_shop.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_express_detail.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_express_detail_v2.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_go_pay.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_go_pay_v2.xml" value="0.17604166666666668" />
         <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_my_physical_stores.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_prize_info_detail.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_register.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_ren_mai.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_store_detail_v2.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_submit_wen_ban_tong_address.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_video_list.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_video_private_setting.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_view_images.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_vip_day.xml" value="0.5" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_watch_video.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_week_activitys.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_week_prize_history.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_wen_ban_tong_company_detail.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/activity_wen_ban_tong_go_pay.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/amallv3_search_top.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/dialog_buy_product.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/dialog_product_share.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/dialog_products.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/dialog_products_v3.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_category.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_category_second.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_main.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_main_new_year.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_message.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_a_mall_v3_my.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_amall.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_login.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_login_enter_message.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_login_with_password_activity.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_manage_user.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_personal_v2.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_recommend_video.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/fragment_up_load_video.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_after_sale_image.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_amallv3_message.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_buy_product_selected_sku.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_guess_product_head_new_year.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_prize_budget.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/item_publish_experience_image.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/view_controller_week_lottery.xml" value="0.17604166666666668" />
+        <entry key="..\:/MyWork/WenPaiTong/app/src/main/res/layout/view_holder_amap_result.xml" value="0.17604166666666668" />
         <entry key="..\:/MyWork/WenPaiTong/zxinglibrary/src/main/res/drawable/ic_open.xml" value="0.4225" />
       </map>
     </option>
@@ -13,5 +88,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.17604166666666668" />
+      </ProjectState>
+    </option>
   </component>
 </project>

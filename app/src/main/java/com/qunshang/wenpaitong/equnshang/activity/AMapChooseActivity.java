@@ -520,7 +520,7 @@ public class AMapChooseActivity extends BaseActivity implements LocationSource,
         Point screenPosition = aMap.getProjection().toScreenLocation(latLng);
         locationMarker = aMap.addMarker(new MarkerOptions()
                 .anchor(0.5f,0.5f)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.purple_pin)));
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.purple_pin)));
         //设置Marker在屏幕上,不跟随地图移动
         locationMarker.setPositionByPixels(screenPosition.x,screenPosition.y);
         locationMarker.setZIndex(1);

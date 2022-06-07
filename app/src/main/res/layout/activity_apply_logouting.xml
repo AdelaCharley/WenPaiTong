@@ -23,7 +23,7 @@
         android:layout_height="69dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:src="@drawable/image_logouting"/>
+        android:src="@mipmap/image_logouting"/>
 
     <TextView
         android:layout_width="match_parent"

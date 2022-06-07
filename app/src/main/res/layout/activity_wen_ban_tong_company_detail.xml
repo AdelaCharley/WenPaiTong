@@ -152,7 +152,7 @@
                             android:layout_marginRight="8dp"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            android:src="@drawable/rightarrow"
+                            android:src="@mipmap/rightarrow"
                             app:layout_constraintRight_toRightOf="parent"/>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>

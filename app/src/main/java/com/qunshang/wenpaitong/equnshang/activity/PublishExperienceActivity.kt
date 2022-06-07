@@ -52,7 +52,7 @@ class PublishExperienceActivity : BaseActivity() {
         toolbar_title.setText("发布心得")
         images.adapter = adapter
         toolbar_right_image.visibility = View.VISIBLE
-        toolbar_right_image.setImageDrawable(getDrawable(R.drawable.publish_experience))
+        toolbar_right_image.setImageDrawable(getDrawable(R.mipmap.publish_experience))
         initView()
     }
 

@@ -40,25 +40,25 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/bg_vip_day_one" />
+                    android:src="@mipmap/bg_vip_day_one" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/bg_vip_day_two" />
+                    android:src="@mipmap/bg_vip_day_two" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/bg_vip_day_three" />
+                    android:src="@mipmap/bg_vip_day_three" />
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/bg_vip_day_four" />
+                    android:src="@mipmap/bg_vip_day_four" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -87,7 +87,7 @@
                         android:layout_width="335dp"
                         android:layout_height="250dp"
                         android:layout_marginBottom="20dp"
-                        android:src="@drawable/vip_day_ticket_number"
+                        android:src="@mipmap/vip_day_ticket_number"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -174,7 +174,7 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginTop="-20dp"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/vip_day_top_top"
+                        android:src="@mipmap/vip_day_top_top"
                         app:layout_constraintBottom_toTopOf="@id/prizebudget"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
@@ -184,9 +184,9 @@
                         android:id="@+id/vip_day_top"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
-                        android:layout_marginHorizontal="100dp"
-                        android:src="@drawable/vip_day_top"
+                        android:src="@mipmap/vip_day_top"
                         android:translationY="10dp"
+                        android:adjustViewBounds="true"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -218,7 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/vip_day_bottom"
+                        android:src="@mipmap/vip_day_bottom"
                         app:layout_constrainedWidth="true"
                         app:layout_constraintLeft_toLeftOf="@id/vip_day_top_top"
                         app:layout_constraintRight_toRightOf="@id/vip_day_top_top"
@@ -264,7 +264,7 @@
                                     android:layout_marginHorizontal="13dp"
                                     android:layout_marginTop="4dp"
                                     android:id="@+id/bg_prize_number"
-                                    android:src="@drawable/prize_number_number"/>
+                                    android:src="@mipmap/prize_number_number"/>
 
 
                                 <TextView
@@ -362,11 +362,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:translationY="10dp"
+                        android:adjustViewBounds="true"
                         android:id="@+id/prize_number_top"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/vip_day_top"/>
+                        android:src="@mipmap/vip_day_top"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -398,7 +399,7 @@
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginTop="-10dp"
                         android:adjustViewBounds="true"
-                        android:src="@drawable/vip_day_no_zige"
+                        android:src="@mipmap/vip_day_no_zige"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/toptop" />
@@ -408,8 +409,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:layout_marginHorizontal="100dp"
-                        android:src="@drawable/vip_day_top"
+                        android:src="@mipmap/vip_day_top"
                         android:translationY="10dp"
+                        android:adjustViewBounds="true"
                         app:layout_constraintLeft_toLeftOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

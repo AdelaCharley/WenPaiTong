@@ -38,7 +38,7 @@
             android:layout_height="14.5dp"
             android:id="@+id/img_label"
             android:layout_margin="9dp"
-            android:src="@drawable/search_shen" />
+            android:src="@mipmap/search_shen" />
 
         <EditText
             android:background="@null"

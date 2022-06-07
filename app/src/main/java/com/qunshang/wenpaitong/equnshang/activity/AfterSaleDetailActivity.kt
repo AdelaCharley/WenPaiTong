@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -218,4 +219,4 @@ class AfterSaleDetailActivity : BaseActivity() {
         intent.putExtra("skuInfo", product!!.skuInfo)
         startActivity(intent)
     }
-}
+}*/

@@ -15,6 +15,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import com.qunshang.wenpaitong.databinding.FragmentAmallBinding
 
+/*
 class AMallFragment : BaseVideoFragment() {
 
     var isHideTop = false
@@ -90,4 +91,4 @@ class AMallFragment : BaseVideoFragment() {
         isDataLoaded = true
     }
 
-}
+}*/

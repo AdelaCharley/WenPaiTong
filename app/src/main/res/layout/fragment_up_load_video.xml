@@ -116,7 +116,7 @@
                 android:layout_height="13dp"
                 android:layout_marginLeft="18dp"
                 android:layout_marginTop="21dp"
-                android:src="@drawable/suo"
+                android:src="@mipmap/suo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

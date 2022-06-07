@@ -12,16 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="83dp"
         android:orientation="vertical"
-        android:background="@drawable/bg_amallv3_mainfragment_top"
+
         android:paddingTop="24dp">
+        <!--android:background="@mipmap/bg_amallv3_mainfragment_top"-->
         <include layout="@layout/layout_toolbar" android:id="@+id/top"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingVertical="3dp"
-        android:background="@drawable/bg_amallv3_mainfragment_middle">
+        >
+        <!--android:background="@drawable/bg_amallv3_mainfragment_middle"-->
         
         <ImageView
             android:layout_width="wrap_content"

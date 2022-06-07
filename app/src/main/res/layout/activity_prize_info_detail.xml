@@ -170,7 +170,7 @@
                         app:layout_constraintTop_toTopOf="@id/label11"
                         app:layout_constraintBottom_toBottomOf="@id/label11"
                         app:layout_constraintRight_toRightOf="parent"
-                        android:src="@drawable/rightarrow"/>
+                        android:src="@mipmap/rightarrow"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

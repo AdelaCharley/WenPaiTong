@@ -39,7 +39,7 @@ class WorkpointFragment : MyBaseFragment() {
 
     private fun initLayout() {
         if (!UserHelper.isLogin(requireContext())){
-            image_user.setImageDrawable(resources.getDrawable(R.drawable.workpoint_def_headimage))
+            image_user.setImageDrawable(resources.getDrawable(R.mipmap.workpoint_def_headimage))
             pleaselogin.visibility = View.VISIBLE
             foot.visibility = View.GONE
             labelidentity_fans.visibility = View.GONE

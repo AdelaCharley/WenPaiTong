@@ -1,4 +1,5 @@
 package com.qunshang.wenpaitong.equnshang.activity
+/*
 import android.content.Intent
 import android.os.Bundle
 
@@ -169,8 +170,10 @@ class BMallProductDetailActivity : BaseActivity() {
 
         spec_layout.setOnClickListener {
             showAttrubuteList()
-            /*Toast.makeText(this,"a好好", Toast.LENGTH_SHORT).show()
-            SpecDialog(bean.data.attributeList).show(supportFragmentManager,"")*/
+            */
+/*Toast.makeText(this,"a好好", Toast.LENGTH_SHORT).show()
+            SpecDialog(bean.data.attributeList).show(supportFragmentManager,"")*//*
+
         }
         buynow.setOnClickListener {
             showBuyDialog()
@@ -253,4 +256,4 @@ class BMallProductDetailActivity : BaseActivity() {
     }
 
 
-}
+}*/

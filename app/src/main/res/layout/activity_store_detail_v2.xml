@@ -49,7 +49,7 @@
                 android:layout_width="14.5dp"
                 android:layout_height="14.5dp"
                 android:layout_margin="7dp"
-                android:src="@drawable/search_shen" />
+                android:src="@mipmap/search_shen" />
 
             <EditText
                 android:id="@+id/input"

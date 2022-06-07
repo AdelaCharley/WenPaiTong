@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.os.Bundle
 import android.view.KeyEvent
 import kotlinx.android.synthetic.main.activity_bmall_search_result.*
@@ -61,4 +62,4 @@ class BMallSearchResultActivity : BaseActivity() {
         })
     }
 
-}
+}*/

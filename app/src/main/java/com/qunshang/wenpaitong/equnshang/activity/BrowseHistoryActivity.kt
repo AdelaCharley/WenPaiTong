@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.qunshang.wenpaitong.R
@@ -46,4 +47,4 @@ class BrowseHistoryActivity : BaseActivity() {
         })
     }
 
-}
+}*/

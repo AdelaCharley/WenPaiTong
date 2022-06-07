@@ -130,7 +130,7 @@
             android:layout_height="46dp"
             android:layout_marginLeft="4dp"
             android:layout_marginTop="21dp"
-            android:src="@drawable/logo"
+            android:src="@mipmap/logo"
             app:layout_constrainedHeight="true"
             app:layout_constraintRight_toRightOf="@id/price"
             app:layout_constraintTop_toBottomOf="@id/label"

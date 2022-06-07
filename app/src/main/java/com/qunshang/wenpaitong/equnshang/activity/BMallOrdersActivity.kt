@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.content.Intent
 
 import android.os.Bundle
@@ -72,4 +73,4 @@ class BMallOrdersActivity : BaseActivity() {
         val TYPE_CHOOSE_ADDRESS = 200
     }
 
-}
+}*/

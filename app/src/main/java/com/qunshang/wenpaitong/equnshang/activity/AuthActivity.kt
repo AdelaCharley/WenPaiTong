@@ -1,5 +1,6 @@
 package com.qunshang.wenpaitong.equnshang.activity
 
+/*
 import android.content.ContentUris
 import android.content.Intent
 import android.database.Cursor
@@ -346,4 +347,4 @@ class AuthActivity : BaseActivity() {
 
     val RENMIAN = 2
 
-}
+}*/
