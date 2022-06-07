@@ -35,8 +35,8 @@ class PaySuccessActivity : BaseActivity() {
         }
 
         backshop.setOnClickListener {
-            val intent = Intent(this,AMallActivity::class.java)
-            startActivity(intent)
+            /*val intent = Intent(this,AMallActivity::class.java)
+            startActivity(intent)*/
         }
     }
 }

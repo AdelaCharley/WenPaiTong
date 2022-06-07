@@ -16,7 +16,7 @@ import com.kongzue.dialog.v3.CustomDialog;
 
 import com.qunshang.wenpaitong.R;
 import com.qunshang.wenpaitong.equnshang.Constants;
-import com.qunshang.wenpaitong.equnshang.activity.AMallActivity;
+/*import com.qunshang.wenpaitong.equnshang.activity.AMallActivity;*/
 import com.qunshang.wenpaitong.equnshang.activity.AMallActivityV3_NewYear;
 import com.qunshang.wenpaitong.equnshang.activity.BaseActivity;
 import com.qunshang.wenpaitong.equnshang.activity.LoginActivity;
@@ -111,9 +111,9 @@ public class PartnerFragment extends MyBaseFragment {
                         AMallActivityV3_NewYear.class);
                 startActivity(intent);
             } else {
-                Intent intent = new Intent(requireContext(),
+                /*Intent intent = new Intent(requireContext(),
                         AMallActivity.class);
-                startActivity(intent);
+                startActivity(intent);*/
             }
         });
     }

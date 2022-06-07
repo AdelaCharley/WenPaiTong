@@ -174,15 +174,15 @@ class PaySuccessActivityV2 : BaseActivity (){
 
     /*查看订单详情*/
     private fun seeOrderDetail() {
-        val intent = Intent(this, OrderDetailActivityV2::class.java)
+        /*val intent = Intent(this, OrderDetailActivityV2::class.java)
         intent.putExtra("id", orderId)
-        startActivity(intent)
+        startActivity(intent)*/
     }
 
     /*返回首页*/
     private fun goToMain() {
-        val intent = Intent(this, AMallActivityV3::class.java)
-        startActivity(intent)
+        /*val intent = Intent(this, AMallActivityV3::class.java)
+        startActivity(intent)*/
     }
 
     /*邀请好友拼团*/

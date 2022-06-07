@@ -14,7 +14,7 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import com.qunshang.wenpaitong.R
-import com.qunshang.wenpaitong.equnshang.activity.BMallGoBuyActivity
+//import com.qunshang.wenpaitong.equnshang.activity.BMallGoBuyActivity
 import com.qunshang.wenpaitong.equnshang.adapter.BuyListSelectedSkuAdapter
 import com.qunshang.wenpaitong.equnshang.adapter.SpecsDialogAdapter
 import com.qunshang.wenpaitong.equnshang.data.ProductBean
@@ -78,7 +78,7 @@ class BuyProductDialog (context: Context, val bean : ProductBean) : BottomPopupV
     }
 
     fun goToBuy(){
-        if (selectedSkuAdapter.selectedSkus.size == 0){
+        /*if (selectedSkuAdapter.selectedSkus.size == 0){
             TipDialog.show(context as AppCompatActivity,"您还没有选择商品",TipDialog.TYPE.WARNING)
             return
         }
@@ -86,7 +86,7 @@ class BuyProductDialog (context: Context, val bean : ProductBean) : BottomPopupV
         intent.putExtra("skus",selectedSkuAdapter.selectedSkus)
         intent.putExtra("data",bean)
         context?.startActivity(intent)
-        dismiss()
+        dismiss()*/
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

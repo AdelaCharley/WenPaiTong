@@ -19,7 +19,7 @@ import java.util.List;
 
 import com.qunshang.wenpaitong.R;
 import com.qunshang.wenpaitong.equnshang.activity.AMallV3ProductDetailActivity;
-import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;
+//import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;
 import com.qunshang.wenpaitong.equnshang.activity.PinTuanDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.MyGroupBean;
 import com.qunshang.wenpaitong.equnshang.utils.CommonUtil;
@@ -88,9 +88,9 @@ public class GroupListAdapter extends RecyclerView.Adapter<GroupListAdapter.View
         holder.orderdetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, OrderDetailActivityV2.class);
+                /*Intent intent = new Intent(context, OrderDetailActivityV2.class);
                 intent.putExtra("id",data.get(position).getOrderId());
-                context.startActivity(intent);
+                context.startActivity(intent);*/
             }
         });
         holder.again.setOnClickListener(new View.OnClickListener() {

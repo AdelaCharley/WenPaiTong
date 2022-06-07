@@ -110,9 +110,9 @@ class PinTuanDetailActivity : BaseActivity() {
             if (!this::dataBean.isInitialized){
                 return@setOnClickListener
             }
-            val intent = Intent(this, OrderDetailActivityV2::class.java)
+            /*val intent = Intent(this, OrderDetailActivityV2::class.java)
             intent.putExtra("id",dataBean.orderId)
-            startActivity(intent)
+            startActivity(intent)*/
         }
         setSubTitleLayout()
         setCountDownLayout(dataBean.groupInfo.expireTime)

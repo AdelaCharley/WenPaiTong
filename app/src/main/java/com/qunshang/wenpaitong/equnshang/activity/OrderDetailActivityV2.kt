@@ -42,6 +42,7 @@ import com.qunshang.wenpaitong.equnshang.utils.TimeUtil
 import java.lang.Exception
 import java.util.*
 
+/*
 class OrderDetailActivityV2 : BaseActivity() {
 
     var orderId = -999
@@ -490,4 +491,4 @@ class OrderDetailActivityV2 : BaseActivity() {
             })
     }
 
-}
+}*/

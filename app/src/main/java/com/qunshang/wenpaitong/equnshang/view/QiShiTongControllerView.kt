@@ -123,9 +123,9 @@ class QiShiTongControllerView(context: Context?, attrs: AttributeSet?) : Relativ
                 onethoundtobuy.visibility = View.VISIBLE
                 product_price.setText("拼团采购价￥" + videoDataBean!!.productPurchasePrice.toString() + "起")
                 layout_lottery.setOnClickListener {
-                    val intent = Intent(context, BMallProductDetailActivity::class.java)
+                    /*val intent = Intent(context, BMallProductDetailActivity::class.java)
                     intent.putExtra("productId", videoDataBean!!.getProductId())
-                    context.startActivity(intent)
+                    context.startActivity(intent)*/
                 }
             } else {
                 layout_lottery.setOnClickListener {

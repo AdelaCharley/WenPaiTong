@@ -519,7 +519,7 @@ class PersonalFragment: MyBaseFragment(), View.OnClickListener {
                            startActivity(Intent(context,LoginActivity::class.java))
                            return@setOnClickListener
                        }
-                       context?.startActivity(Intent(context,BrowseHistoryActivity::class.java))
+                       //context?.startActivity(Intent(context,BrowseHistoryActivity::class.java))
                    }
 
                    layout_discount.setOnClickListener {

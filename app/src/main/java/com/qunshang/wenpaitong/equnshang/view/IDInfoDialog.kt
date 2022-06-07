@@ -20,7 +20,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.qunshang.wenpaitong.R
-import com.qunshang.wenpaitong.equnshang.activity.AuthActivity
+//import com.qunshang.wenpaitong.equnshang.activity.AuthActivity
 import com.qunshang.wenpaitong.equnshang.activity.AuthInfoActivity
 import com.qunshang.wenpaitong.equnshang.data.*
 import com.qunshang.wenpaitong.equnshang.model.ApiManager

@@ -38,7 +38,7 @@
         android:id="@+id/ivplay"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:background="@drawable/ic_play"
+        android:background="@mipmap/ic_play"
         android:visibility="gone"/>
 
     <SeekBar

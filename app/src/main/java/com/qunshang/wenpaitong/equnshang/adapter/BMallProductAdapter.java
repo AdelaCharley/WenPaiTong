@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.qunshang.wenpaitong.R;
-import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
+//import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.BMallProductBean;
 import com.qunshang.wenpaitong.equnshang.utils.CommonUtil;
 
@@ -48,9 +48,9 @@ public class BMallProductAdapter extends RecyclerView.Adapter<BMallProductAdapte
         holder.name.setText(bean.getProductName());
         holder.price.setText("￥" + bean.getPrice());
         holder.layout.setOnClickListener(v -> {
-            Intent intent = new Intent(context, BMallProductDetailActivity.class);
+            /*Intent intent = new Intent(context, BMallProductDetailActivity.class);
             intent.putExtra("productId",bean.getProductId());
-            context.startActivity(intent);
+            context.startActivity(intent);*/
         });
         ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) holder.root.getLayoutParams();
         if (data.size() >= 2){

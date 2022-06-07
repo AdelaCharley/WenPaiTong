@@ -24,8 +24,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import com.qunshang.wenpaitong.R;
-import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
-import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;
+/*import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
+import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;*/
 import com.qunshang.wenpaitong.equnshang.activity.PinTuanDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.AMallV3MessageBean;
 import com.qunshang.wenpaitong.equnshang.data.BaseHttpBean;
@@ -105,9 +105,9 @@ public class AMallV3MessageAdapter extends RecyclerView.Adapter<AMallV3MessageAd
                 });
                 switch (bean.getJumpType()) {
                     case "order":
-                        Intent intent = new Intent(context, OrderDetailActivityV2.class);
+                        /*Intent intent = new Intent(context, OrderDetailActivityV2.class);
                         intent.putExtra("id", data.get(position).getOrderId());
-                        context.startActivity(intent);
+                        context.startActivity(intent);*/
                         break;
                     case "group":
                         Intent intent1 = new Intent(context, PinTuanDetailActivity.class);
@@ -115,9 +115,9 @@ public class AMallV3MessageAdapter extends RecyclerView.Adapter<AMallV3MessageAd
                         context.startActivity(intent1);
                         break;
                     case "afterSale":
-                        Intent intent2 = new Intent(context, AfterSaleDetailActivity.class);
+                        /*Intent intent2 = new Intent(context, AfterSaleDetailActivity.class);
                         intent2.putExtra("afterSaleSn", bean.getAfterSaleSn());
-                        context.startActivity(intent2);
+                        context.startActivity(intent2);*/
                         break;
                 }
             }

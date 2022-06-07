@@ -28,13 +28,13 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import com.qunshang.wenpaitong.R;
 import com.qunshang.wenpaitong.equnshang.activity.AMallV3ProductDetailActivity;
-import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
-import com.qunshang.wenpaitong.equnshang.activity.ApplyAfterSaleActivity;
+/*import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
+import com.qunshang.wenpaitong.equnshang.activity.ApplyAfterSaleActivity;*/
 import com.qunshang.wenpaitong.equnshang.activity.DoApplyAfterSaleActivity;
 import com.qunshang.wenpaitong.equnshang.activity.ExpressDetailActivityV2;
 import com.qunshang.wenpaitong.equnshang.activity.GoPayActivityV2;
 import com.qunshang.wenpaitong.equnshang.activity.OrderActivityV2;
-import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;
+//import com.qunshang.wenpaitong.equnshang.activity.OrderDetailActivityV2;
 import com.qunshang.wenpaitong.equnshang.activity.PinTuanDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.BaseHttpBean;
 import com.qunshang.wenpaitong.equnshang.data.OrderBean;
@@ -64,10 +64,10 @@ public class OrderAdapterV2 extends RecyclerView.Adapter<OrderAdapterV2.ViewHold
     }
 
     public void goToDetailActivity(int position){
-        Intent intent = new Intent(context, OrderDetailActivityV2.class);
+        /*Intent intent = new Intent(context, OrderDetailActivityV2.class);
         intent.putExtra("id",data.get(position).getOrderId());
         intent.putExtra("order",data.get(position));
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     @Override
@@ -296,7 +296,7 @@ public class OrderAdapterV2 extends RecyclerView.Adapter<OrderAdapterV2.ViewHold
     }
 
     public void applyShouHou(int position){
-        if (!StringUtils.isEmpty(data.get(position).getAfterSaleSn())){
+        /*if (!StringUtils.isEmpty(data.get(position).getAfterSaleSn())){
             Intent intent = new Intent(context, AfterSaleDetailActivity.class);
             intent.putExtra("afterSaleSn",data.get(position).getAfterSaleSn());
             context.startActivity(intent);
@@ -304,7 +304,7 @@ public class OrderAdapterV2 extends RecyclerView.Adapter<OrderAdapterV2.ViewHold
         }
         Intent intent = new Intent(context, ApplyAfterSaleActivity.class);
         intent.putExtra("orderId",data.get(position).getOrderId());
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     public void confirm(int position){
@@ -350,9 +350,9 @@ public class OrderAdapterV2 extends RecyclerView.Adapter<OrderAdapterV2.ViewHold
             intent.putExtra("type",10);
             context.startActivity(intent);
         } else {
-            Intent intent = new Intent(context, AfterSaleDetailActivity.class);
+            /*Intent intent = new Intent(context, AfterSaleDetailActivity.class);
             intent.putExtra("afterSaleSn",data.get(position).getAfterSaleSn());
-            context.startActivity(intent);
+            context.startActivity(intent);*/
         }
     }
 

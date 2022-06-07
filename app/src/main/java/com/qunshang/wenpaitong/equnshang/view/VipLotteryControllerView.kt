@@ -85,9 +85,9 @@ class VipLotteryControllerView(context: Context?, attrs: AttributeSet?) : Relati
                     AMallActivityV3_NewYear::class.java)
             context.startActivity(intent)
         } else {
-            val intent = Intent(context,
+            /*val intent = Intent(context,
                 AMallActivity::class.java)
-            context.startActivity(intent)
+            context.startActivity(intent)*/
         }
         /*val intent = Intent(context, AMallActivityV3::class.java)
         context.startActivity(intent)*/

@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import com.qunshang.wenpaitong.R;
-import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
+//import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.MyBuyOrderBean;
 
 public class MyBuyOrderProductsAdapter extends RecyclerView.Adapter<MyBuyOrderProductsAdapter.ViewHolder> {
@@ -47,9 +47,9 @@ public class MyBuyOrderProductsAdapter extends RecyclerView.Adapter<MyBuyOrderPr
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, BMallProductDetailActivity.class);
+                /*Intent intent = new Intent(context, BMallProductDetailActivity.class);
                 intent.putExtra("productId",data.getProductId());
-                context.startActivity(intent);
+                context.startActivity(intent);*/
             }
         });
         holder.product_price.setText("价格：￥" + String.valueOf(bean.getPrice() * Integer.parseInt(bean.getNumber())));

@@ -16,8 +16,8 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import com.qunshang.wenpaitong.R;
-import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
-import com.qunshang.wenpaitong.equnshang.activity.AfterSaleSendExpressActivity;
+/*import com.qunshang.wenpaitong.equnshang.activity.AfterSaleDetailActivity;
+import com.qunshang.wenpaitong.equnshang.activity.AfterSaleSendExpressActivity;*/
 import com.qunshang.wenpaitong.equnshang.data.ExchangeBean;
 import com.qunshang.wenpaitong.equnshang.utils.CommonUtil;
 
@@ -98,7 +98,7 @@ public class ExchangeAdapter extends RecyclerView.Adapter<ExchangeAdapter.ViewHo
     }
 
     public void setDeliver(int position){
-        Intent intent = new Intent(context, AfterSaleSendExpressActivity.class);
+        /*Intent intent = new Intent(context, AfterSaleSendExpressActivity.class);
         intent.putExtra("afterSaleSn",data.get(position).getAfterSaleSn());
         intent.putExtra("address",data.get(position).getVendorAddress());
         intent.putExtra("skuPic",data.get(position).getSkuPic());
@@ -106,13 +106,13 @@ public class ExchangeAdapter extends RecyclerView.Adapter<ExchangeAdapter.ViewHo
         intent.putExtra("productSinglePrice",data.get(position).getProductSinglePrice());
         intent.putExtra("productQuantity",data.get(position).getProductQuantity());
         intent.putExtra("skuInfo",data.get(position).getSkuInfo());
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     public void seeAfterSaleDetailActivity(int position){
-        Intent intent = new Intent(context, AfterSaleDetailActivity.class);
+        /*Intent intent = new Intent(context, AfterSaleDetailActivity.class);
         intent.putExtra("afterSaleSn",data.get(position).getAfterSaleSn());
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     @Override

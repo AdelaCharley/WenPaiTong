@@ -26,8 +26,8 @@ class ProcureActivity : BaseActivity() {
         Constants.shopflag = "bmall"
         qishitongtype = 2
         layout.setOnClickListener {
-            val intent = Intent(this,BMallShopActivity::class.java)
-            startActivity(intent)
+            /*val intent = Intent(this,BMallShopActivity::class.java)
+            startActivity(intent)*/
         }
         toolbar_back.setOnClickListener {
             finish()

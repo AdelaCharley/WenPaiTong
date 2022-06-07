@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.qunshang.wenpaitong.R;
-import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
+//import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
 import com.qunshang.wenpaitong.equnshang.activity.ProductDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.StoreDataBean;
 import com.qunshang.wenpaitong.equnshang.data.UserInfoViewModel;
@@ -130,9 +130,9 @@ public class ManufactureProductAdapter extends RecyclerView.Adapter<RecyclerView
             ((BMallProductViewHolder) holder).layout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(context, BMallProductDetailActivity.class);
+                    /*Intent intent = new Intent(context, BMallProductDetailActivity.class);
                     intent.putExtra("productId",bean.getProductId());
-                    context.startActivity(intent);
+                    context.startActivity(intent);*/
                 }
             });
         }

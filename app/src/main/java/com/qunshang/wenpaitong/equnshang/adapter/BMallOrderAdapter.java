@@ -22,10 +22,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import com.qunshang.wenpaitong.R;
 import com.qunshang.wenpaitong.equnshang.activity.AddressActivityV2;
-import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
+//import com.qunshang.wenpaitong.equnshang.activity.BMallProductDetailActivity;
 import com.qunshang.wenpaitong.equnshang.activity.ExpressDetailActivity;
 import com.qunshang.wenpaitong.equnshang.activity.GoPayActivity;
-import com.qunshang.wenpaitong.equnshang.activity.BMallOrdersActivity;
+//import com.qunshang.wenpaitong.equnshang.activity.BMallOrdersActivity;
 import com.qunshang.wenpaitong.equnshang.activity.MyBuyOrderDetailActivity;
 import com.qunshang.wenpaitong.equnshang.data.BaseHttpBean;
 import com.qunshang.wenpaitong.equnshang.data.MyBuyBean;
@@ -207,9 +207,9 @@ public class BMallOrderAdapter extends RecyclerView.Adapter<BMallOrderAdapter.Bu
         if (data.get(position).getOrderStatus() == 10){
             BottomMenu.show((AppCompatActivity) context, new String[]{"修改地址"}, (text, index) -> {
                 if (index == 0){
-                    BMallOrdersActivity.Companion.setOrderId(data.get(position).getOrderId());
+                    /*BMallOrdersActivity.Companion.setOrderId(data.get(position).getOrderId());
                     Intent intent = new Intent(context, AddressActivityV2.class);
-                    ((AppCompatActivity) context).startActivityForResult(intent, BMallOrdersActivity.Companion.getTYPE_CHOOSE_ADDRESS());
+                    ((AppCompatActivity) context).startActivityForResult(intent, BMallOrdersActivity.Companion.getTYPE_CHOOSE_ADDRESS());*/
                 }
             });
         } else {
@@ -278,9 +278,9 @@ public class BMallOrderAdapter extends RecyclerView.Adapter<BMallOrderAdapter.Bu
     }
 
     public void buyagain(int position){
-        Intent intent = new Intent(context, BMallProductDetailActivity.class);
+        /*Intent intent = new Intent(context, BMallProductDetailActivity.class);
         intent.putExtra("productId",data.get(position).getProductId());
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     public void seeexpress(int position){

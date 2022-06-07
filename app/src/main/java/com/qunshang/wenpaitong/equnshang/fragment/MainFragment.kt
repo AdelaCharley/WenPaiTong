@@ -210,14 +210,14 @@ class MainFragment : BaseFragment(), View.OnClickListener {
                     return
                 }
                 if (Constants.isNewPinHaoHuo){
-                    val intent = Intent(requireContext(),
+                   /* val intent = Intent(requireContext(),
                         AMallActivityV3::class.java)
-                    startActivity(intent)
+                    startActivity(intent)*/
 
                 } else {
-                    val intent = Intent(requireContext(),
+                    /*val intent = Intent(requireContext(),
                         AMallActivity::class.java)
-                    startActivity(intent)
+                    startActivity(intent)*/
                 }
 
             }
